@@ -1,0 +1,26 @@
+/*
+- Name: Raw project - links.scss
+- Version: 1.0
+- Latest update: 4.4.2016
+- Author: Mario Loncarek
+- Author web site: http://marioloncarek.com
+*/
+
+/* ––––––––––––––––––––––––––––––––––––––––––––––––––
+LINKS
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+a {
+  @include transitions;
+  color: $link-color;
+  text-decoration: none;
+
+  &:hover {
+    color: $link-color-hover;
+  }
+
+  &.alt {
+    color: $ui-default;
+  }
+
+}

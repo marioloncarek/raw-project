@@ -1,0 +1,40 @@
+/*
+- Name: Raw project - badges.scss
+- Version: 1.0
+- Latest update: 19.06.2016
+- Author: Mario Loncarek
+- Author web site: http://marioloncarek.com
+*/
+
+/* ––––––––––––––––––––––––––––––––––––––––––––––––––
+BADGES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.badge {
+  display: inline-block;
+  padding: 5px 7px;
+  background: $ui-default;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  font-size: $small-font-size;
+  line-height: 1;
+  cursor: pointer;
+
+  &-right {
+    float: right;
+  }
+
+  &-outline {
+    border: 1px solid $ui-default;
+    background: none;
+    color: $ui-default;
+    margin-top: -1px;
+  }
+
+  &-blank {
+    background: none;
+    color: $ui-default;
+  }
+
+}

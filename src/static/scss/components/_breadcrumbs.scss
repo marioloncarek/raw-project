@@ -1,0 +1,58 @@
+/* 
+- Name: Raw project - breadcrumbs.scss
+- Version: 1.0
+- Latest update: 19.06.2016
+- Author: Mario Loncarek
+- Author web site: http://marioloncarek.com
+*/
+
+/* ––––––––––––––––––––––––––––––––––––––––––––––––––
+BREADCRUMBS
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.breadcrumbs {
+  display: block;
+  overflow: hidden;
+  margin: 0;
+  list-style: none;
+
+  li {
+    float: left;
+    margin: 0;
+    padding: 0 .75em 0 0;
+
+    a {
+      padding-left: .75em;
+    }
+
+    &:before {
+      position: relative;
+      content: '\002f';
+      color: $base;
+    }
+
+    &:first-child {
+
+      a {
+        padding-left: 0;
+      }
+
+      &:before {
+        content: ' ';
+      }
+
+    }
+
+  }
+
+  .current {
+
+    a {
+      padding-left: .75em;
+      color: $base-font-color;
+      cursor: default;
+    }
+
+  }
+
+}

@@ -1,0 +1,98 @@
+/* 
+- Name: Raw project - horizontal-rules.scss
+- Version: 1.0
+- Latest update: 19.06.2016
+- Author: Mario Loncarek
+- Author web site: http://marioloncarek.com
+*/
+
+/* ––––––––––––––––––––––––––––––––––––––––––––––––––
+HORIZONTAL RULES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+hr {
+  clear: both;
+  margin: ($baseline*2) 0;
+  min-height: 0;
+  height: 1px;
+  border-top: 1px solid $base;
+  border-right: 0;
+  border-bottom: 0;
+  border-left: 0;
+
+  &.space {
+    border: 0;
+  }
+
+  &.dashed {
+    border-style: dashed;
+  }
+
+  &.dotted {
+    border-style: dotted;
+  }
+
+  &.double {
+    border-style: double;
+    border-top: 3px double $base;
+  }
+
+  &.gradient {
+    height: 1px;
+    border: 0;
+    background: $ui-default;
+    background-image: linear-gradient(to left, #e1e1e1, #777, #e1e1e1);
+  }
+
+  &.icon {
+    padding: 0;
+    border: none;
+    border-top: medium double $base;
+    color: $base;
+    text-align: center;
+
+    &:after {
+      position: relative;
+      top: -.8em;
+      display: inline-block;
+      padding: 0 .25em;
+      background: #fff;
+      content: '\f141';
+      font-family: 'Ionicons';
+    }
+
+  }
+
+  &.text {
+    padding: 0;
+    border: none;
+    border-top: medium double $base;
+    color: $base;
+    text-align: center;
+
+    &:after {
+      position: relative;
+      top: -.8em;
+      display: inline-block;
+      padding: 0 .5em;
+      background: #fff;
+      content: 'WELCOME';
+    }
+
+  }
+
+}
+
+.divider {
+  clear: both;
+  margin-top: ($baseline*2);
+  margin-bottom: ($baseline*2);
+  width: 100px;
+  height: 2px;
+
+  &.center {
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+}

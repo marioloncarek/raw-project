@@ -1,0 +1,60 @@
+/* 
+- Name: Raw project - pagination.scss
+- Version: 1.0
+- Latest update: 19.06.2016
+- Author: Mario Loncarek
+- Author web site: http://marioloncarek.com
+*/
+
+/* ––––––––––––––––––––––––––––––––––––––––––––––––––
+PAGINATION
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.pagination {
+  margin: $baseline 0;
+  list-style: none;
+
+  li {
+    @include transitions;
+    display: inline-block;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:hover {
+      background: $base;
+
+      a {
+        color: $base-font-color;
+      }
+
+    }
+
+    a {
+      display: inline-block;
+      padding: .4em .8em;
+    }
+
+    &.active {
+      background-color: $ui-default;
+
+      a {
+        color: #fff;
+      }
+
+    }
+
+  }
+
+  &.center {
+    width: 100%;
+    text-align: center;
+  }
+
+  &.right {
+    width: 100%;
+    text-align: right;
+  }
+
+}

@@ -1,0 +1,1009 @@
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>UI Elements - Raw project</title>
+    <meta name="description" content="">
+    <meta name="author" content="Mario Loncarek">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="apple-touch-icon" href="../static/images/favicons/apple-touch-icon.png">
+    <!-- CSS -->
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Poppins:500' rel='stylesheet' type='text/css'>
+    <style>
+        aside {
+            width: 20%;
+            float: left;
+            border-right: 1px solid #e9e9e9;
+            position: fixed;
+            padding-bottom: 4rem;
+            overflow: auto;
+            height: 100%;
+            background: #0071bc;
+        }
+
+        main {
+            width: 80%;
+            float: left;
+            margin-left: 20%;
+        }
+
+        .griddummy {
+            margin-bottom: 10px !important;
+            padding: 8px 0;
+            -webkit-border-radius: 100px;
+            -moz-border-radius: 100px;
+            border-radius: 100px;
+            background: #f0f0f0;
+            text-align: center;
+        }
+
+        #ui-destop, #ui-tablet, #ui-mobile {
+            cursor: pointer;
+        }
+
+        .ui-filename {
+            font-size: 12px;
+            color: #444;
+        }
+
+        .ui-menu ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .ui-menu li {
+            padding: 0;
+            margin: 0;
+        }
+
+        .ui-menu li:first-child {
+            padding: 0;
+            margin: 0;
+        }
+
+        .ui-menu a {
+            padding: 1rem 4rem;
+            display: block;
+            width: 100%;
+            color: #fff;
+            font-size: 20px;
+        }
+
+        @media screen and (max-width: 1195px) {
+            .padding-all {
+                padding: 1rem;
+            }
+
+            .ui-menu a {
+                padding: 1rem;
+                font-size: 18px;
+            }
+        }
+
+        @media screen and (max-width: 1100px) {
+            aside {
+                display: none;
+            }
+
+            main {
+                width: 100%;
+                margin-left: 0;
+            }
+        }
+
+        footer {
+            background: #f0f0f0;
+        }
+    </style>
+    <!-- JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+    <script>window.Modernizr || document.write('<script src="static/js/fallback/modernizr-2.8.3.min.js"><\/script>')</script>
+</head>
+<body>
+<!--[if lt IE 9]>
+<div class="browserupgrade">
+    <p>You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+        your browser</a> to improve your experience.</p>
+</div>
+<![endif]-->
+
+<aside>
+
+    <div class="padding-all">
+        <h6 class="color-white">
+            Table of contents:
+        </h6>
+    </div>
+
+    <div class="ui-menu">
+        <ul>
+            <li><a href="#typography">Typography</a></li>
+            <li><a href="#lists">Lists</a></li>
+            <li><a href="#horizontal-rules">Horizontal rules</a></li>
+            <li><a href="#media">Media</a></li>
+            <li><a href="#forms">Forms</a></li>
+            <li><a href="#tables">Tables</a></li>
+            <li><a href="#buttons">Buttons</a></li>
+            <li><a href="#badges">Badges</a></li>
+            <li><a href="#pagination">Pagination</a></li>
+            <li><a href="#grid">Grid</a></li>
+        </ul>
+    </div>
+
+</aside>
+
+<main id="main">
+
+    <div id="top" class="row-full-width bg-secondary padding-all">
+        <h3 class="color-primary">Raw project - UI elements</h3>
+        <p>
+            Base CSS and HTML used in projects by Mario Loncarek
+        </p>
+    </div>
+
+    <div class="row-full-width text-center padding-all">
+        <i id="ui-destop" class="ion-android-desktop x-3 padding-left-right-half"></i>
+        <i id="ui-tablet" class="ion-ipad x-3 padding-left-right-half"></i>
+        <i id="ui-mobile" class="ion-iphone x-3 padding-left-right-half"></i>
+    </div>
+
+    <div class="row-full-width padding-bottom">
+
+        <div class="span-12 bg-secondary margin-bottom" id="typography">
+            <p class="color-primary x-2">
+                # Typography
+                <small class="ui-filename">base/_typography</small>
+            </p>
+        </div>
+
+        <div class="span-4 padding-all">
+            <h1>Heading 1</h1>
+            <h2>Heading 2</h2>
+            <h3>Heading 3</h3>
+            <h4>Heading 4</h4>
+            <h5>Heading 5</h5>
+            <h6>Heading 6</h6>
+        </div>
+
+        <div class="span-4 padding-all">
+            <p>
+                <strong>Strong</strong> and <b>Bolded</b> word
+            </p>
+            <p>
+                <em>Emphasis</em> and <i>Italic</i> word
+            </p>
+            <p>
+                <u>Underlined</u> word
+            </p>
+            <p>
+                <small>Small</small>
+                word
+            </p>
+            <p>
+                <sup>Superscripted</sup> word
+            </p>
+            <p>
+                <sub>Suberscripted</sub> word
+            </p>
+        </div>
+
+        <div class="span-4 padding-all">
+            <p>
+                <code>.code block</code> section
+            </p>
+            <p>
+                Abbreviations <abbr title="Abbreviations">abbr</abbr>
+            </p>
+            <p>
+                A <span class="text-highlight">Highlighted</span> word and expandible with: <code>bg-*</code>, <code>color-*</code>
+                modifiers
+            </p>
+            <p>
+                <a href="#">This is a link</a>
+            </p>
+        <pre><code>.code-block {
+    background: #f1f1f1;
+}</code></pre>
+        </div>
+
+        <div class="span-12 padding-left-right">
+            <p>Paragraphs expandible with: <code>x-*</code>, <code>color-*</code> modifiers</p>
+        </div>
+
+        <div class="span-12 padding-all">
+            <p>
+                <b>Paragraph</b>
+            </p>
+            <p>
+                Now that we know who you are, I know who I am. I'm not a mistake! It all makes sense! In a comic, you
+                know
+                how you can tell who the arch-villain's going to be? He's the exact opposite of the hero. And most times
+                they're friends, like you and me! I should've known way back when... You know why, David? Because of the
+                kids. They called me Mr Glass. Now that we know who you are, I know who I am. I'm not a mistake! It all
+                makes sense! In a comic, you know how you can tell who the arch-villain's going to be? He's the exact
+                opposite of the hero. And most times they're friends, like you and me! I should've known way back
+                when...
+                You know why, David? Because of the kids. They called me Mr Glass.
+            </p>
+            <blockquote>
+                <p>
+                    I want to risk hitting my head on the ceiling of my talent. I want to really test it out and say:
+                    O.K.,
+                    you’re not that good. You just reached the level here. I don’t ever want to fail, but I want to risk
+                    failure every time out of the gate.
+                </p>
+                <cite>Quentin Tarantino</cite>
+            </blockquote>
+        </div>
+
+    </div>
+
+    <div class="row-full-width padding-bottom">
+
+        <div class="span-12 bg-secondary margin-bottom" id="lists">
+            <p class="color-primary x-2">
+                # Lists
+                <small class="ui-filename">base/_lists</small>
+            </p>
+        </div>
+
+        <div class="span-12 padding-all">
+            <ul class="breadcrumbs">
+                <li><a href="#">Breadcrumb</a></li>
+                <li><a href="#">Breadcrumb</a></li>
+                <li class="current"><a href="javascript:;">Current</a></li>
+            </ul>
+        </div>
+
+        <div class="span-4 padding-all">
+            <ul>
+                <li>Unordered list</li>
+                <li>
+                    Unordered list
+                    <ul>
+                        <li>Nested list</li>
+                        <li>Nested list</li>
+                    </ul>
+                </li>
+                <li>Unordered list</li>
+                <li>Unordered list</li>
+            </ul>
+        </div>
+
+        <div class="span-4 padding-all">
+            <ol>
+                <li>Ordered list</li>
+                <li>
+                    Ordered list
+                    <ol>
+                        <li>Ordered list nested</li>
+                        <li>Ordered list nested</li>
+                    </ol>
+                </li>
+                <li>Ordered list</li>
+                <li>Ordered list</li>
+            </ol>
+        </div>
+
+        <div class="span-4 padding-all">
+            <ol>
+                <li>Ordered list</li>
+                <li>
+                    Ordered list
+                    <ul>
+                        <li>Unordered list nested</li>
+                        <li>Unordered list nested</li>
+                    </ul>
+                </li>
+                <li>Unordered list nested</li>
+                <li>Unordered list nested</li>
+            </ol>
+        </div>
+
+        <div class="span-6 padding-all">
+            <dl>
+                <dt>Description list item 1</dt>
+                <dd>Description list item 1.1</dd>
+            </dl>
+        </div>
+
+        <div class="span-6 padding-all">
+            <ul class="alt">
+                <li>Unordered list</li>
+                <li>Unordered list</li>
+                <li>Unordered list</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="row-full-width padding-bottom">
+
+        <div class="span-12 bg-secondary margin-bottom" id="horizontal-rules">
+            <p class="color-primary x-2">
+                # Horizontal rules
+                <small class="ui-filename">components/_horizontal-rules</small>
+            </p>
+        </div>
+
+        <div class="span-12 padding-left-right">
+            <p>Expandible with: <code>margin-*</code>, <code>padding-*</code> modifiers</p>
+        </div>
+
+        <div class="span-12 padding-all">
+            <hr>
+            <hr class="space">
+            <hr class="dashed">
+            <hr class="dotted">
+            <hr class="double">
+            <hr class="gradient">
+            <hr class="icon">
+            <hr class="text">
+        </div>
+
+    </div>
+
+    <div class="row-full-width padding-bottom">
+
+        <div class="span-12 bg-secondary margin-bottom" id="media">
+            <p class="color-primary x-2">
+                # Media
+                <small class="ui-filename">components/_media</small>
+            </p>
+        </div>
+
+        <div class="span-12 padding-left-right">
+            <p>Images expandible with: <code>margin-*</code>, <code>img-left</code>, <code>img-right</code>, <code>img-responsive</code>,
+                <code>img-border-*</code>,<code>radius</code>,<code>round</code>
+        </div>
+
+        <div class="span-6 padding-all">
+            <p>
+                <b>Image align</b>
+            </p>
+            <img class="img-left radius" src="../static/images/dummy.jpg" width="130" height="130" alt="Image"/>
+            <img class="img-right radius" src="../static/images/dummy.jpg" width="130" height="130" alt="Image"/>
+            <p>
+                Your bones don't break, mine do. That's clear. Your cells react to bacteria and viruses differently than
+                mine. You don't get sick, I do. That's also clear. But for some reason, you and I react the exact same
+                way to water. We swallow it too fast, we choke. We get some in our lungs, we drown. However unreal it
+                may seem, we are connected, you and I. We're on the same curve, just on opposite ends. Your bones don't
+                break, mine do. That's clear. Your cells react to bacteria and viruses differently than
+                mine. You don't get sick, I do.
+            </p>
+        </div>
+
+        <div class="span-6 padding-all">
+            <p>
+                <b>Image shapes</b>
+            </p>
+            <img src="../static/images/dummy.jpg" class="radius" width="100" height="100" alt="Image">
+            <img src="../static/images/dummy.jpg" class="round" width="100" height="100" alt="Image">
+            <p>
+                <b>Image borders</b>
+            </p>
+            <img src="../static/images/dummy.jpg" class="img-border-thumbnail" width="100" height="100" alt="Image">
+            <img src="../static/images/dummy.jpg" class="img-border-thumbnail-2" width="100" height="100" alt="Image">
+            <img src="../static/images/dummy.jpg" class="img-border-thumbnail-3" width="100" height="100" alt="Image">
+            <img src="../static/images/dummy.jpg" class="img-border-line" width="100" height="100" alt="Image">
+            <img src="../static/images/dummy.jpg" class="round img-border-flat" width="100" height="100"
+                 alt="Image">
+        </div>
+
+        <div class="span-4 padding-all">
+            <p>
+                <b>Responsive image</b>
+            </p>
+            <img src="../static/images/dummy.jpg" class="img-responsive" alt="Image">
+        </div>
+
+        <div class="span-4 padding-all">
+            <p>
+                <b>Responsive embed</b>
+            </p>
+            <div class="media">
+                <iframe src="https://www.youtube.com/embed/FFWOr-Uho9M" allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+
+        <div class="span-4 padding-all">
+            <p>
+                <b>Figure with caption</b>
+            </p>
+            <figure>
+                <img src="../static/images/dummy.jpg" alt="logo">
+                <figcaption>This is figcaption, a way to describe what is image talking about...</figcaption>
+            </figure>
+        </div>
+
+    </div>
+
+    <div class="row-full-width padding-bottom">
+
+        <div class="span-12 bg-secondary margin-bottom" id="forms">
+            <p class="color-primary x-2">
+                # Forms
+                <small class="ui-filename">components/_forms</small>
+            </p>
+        </div>
+
+        <div class="span-12 padding-left-right">
+            <p>Inputs expandible with: <code>primary</code>, <code>secondary</code>, <code>tertiary</code>,
+                <code>error</code>, <code>warrning</code>, <code>success</code>, <code>neutral</code>,
+                <code>white</code> modifiers</p>
+        </div>
+
+        <form method="POST" name="contactform" action="contact-form-handler.php">
+            <div class="row-full-width">
+                <div class="span-6 padding-all">
+                    <fieldset>
+                        <label for="NameInput">Your Name:</label>
+                        <input type="text" placeholder="Name..." id="NameInput" name="name">
+                    </fieldset>
+                </div>
+                <div class="span-6 padding-all">
+                    <fieldset>
+                        <label for="EmailInput">Your Email:</label>
+                        <input type="email" placeholder="Email..." id="EmailInput" name="email"
+                               required>
+                    </fieldset>
+                </div>
+                <div class="span-6 padding-all">
+                    <fieldset>
+                        <label for="DateInput">Date:</label>
+                        <input type="date" id="DateInput" name="date" required>
+                    </fieldset>
+                </div>
+                <div class="span-6 padding-all">
+                    <fieldset>
+                        <label for="RangeInput">Range:</label>
+                        <input type="range" id="RangeInput" name="range" min="0" max="100" value="50">
+                    </fieldset>
+                </div>
+                <div class="span-12 padding-all">
+                    <fieldset>
+                        <label for="FileInput">File upload:</label>
+                        <input type="file" id="FileInput" name="file" required>
+                    </fieldset>
+                </div>
+                <div class="span-12 padding-all">
+                    <fieldset>
+                        <label for="GroupedInputLabels">Label groups:</label>
+                        <div class="form-group-label">
+                            <div class="form-group-label_label">
+                                <span class="add-on">Label</span>
+                            </div>
+                            <div class="form-group-label_input">
+                                <input type="text" placeholder="I have labels left and right..." id="GroupedInputLabels"
+                                       name="groupedlabels">
+                            </div>
+                            <div class="form-group-label_label">
+                                <span class="add-on">Also label</span>
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+                <div class="span-12 padding-all">
+                    <fieldset>
+                        <label for="SelectOption">Reason for contacting:</label>
+                        <select id="SelectOption" name="select">
+                            <option value="Option 1">Questions</option>
+                            <option value="Option 2">Admiration</option>
+                            <option value="Option 3">Can I get your number?</option>
+                            <optgroup label="Option Group">
+                                <option value="Option 4">Questions</option>
+                                <option value="Option 5">Admiration</option>
+                                <option value="Option 6">Can I get your number?</option>
+                            </optgroup>
+                        </select>
+                    </fieldset>
+                </div>
+                <div class="span-6 padding-all">
+                    <fieldset>
+                        <legend>Select Services:</legend>
+                        <div>
+                            <input type="checkbox" id="checkbox1"/>
+                            <label for="checkbox1">Red</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="checkbox2" checked="checked"/>
+                            <label for="checkbox2">Yellow</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="checkbox3" checked="checked" disabled="disabled"/>
+                            <label for="checkbox3">Green</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="checkbox4" disabled="disabled"/>
+                            <label for="checkbox4">Brown</label>
+                        </div>
+                    </fieldset>
+                </div>
+                <div class="span-6 padding-all">
+                    <fieldset>
+                        <legend>Select Services:</legend>
+                        <div>
+                            <input id="radio1" name="radio" type="radio">
+                            <label for="radio1">Option 1</label>
+                        </div>
+                        <div>
+                            <input id="radio2" name="radio" type="radio" checked="checked">
+                            <label for="radio2">Option 2</label>
+                        </div>
+                        <div>
+                            <input id="radio3" name="radio" type="radio" disabled="disabled">
+                            <label for="radio3">Option 2</label>
+                        </div>
+                    </fieldset>
+                </div>
+                <div class="span-12 padding-all">
+                    <fieldset>
+                        <label for="exampleMessage">Message</label>
+                        <textarea rows="5" placeholder="Hi Rio..." id="exampleMessage" name="message"></textarea>
+                    </fieldset>
+                </div>
+                <div class="span-12 padding-all">
+                    <fieldset>
+                        <input type="submit" value="Submit" class="bg-tertiary">
+                    </fieldset>
+                </div>
+            </div>
+        </form>
+
+    </div>
+
+    <div class="row-full-width padding-bottom">
+
+        <div class="span-12 bg-secondary margin-bottom" id="tables">
+            <p class="color-primary x-2">
+                # Tables
+                <small class="ui-filename">components/_tables</small>
+            </p>
+        </div>
+
+        <div class="span-12 padding-all">
+            <table class="table">
+                <tr>
+                    <th>
+                        Season
+                    </th>
+                    <th>
+                        Country
+                    </th>
+                    <th>
+                        Driver
+                    </th>
+                    <th>
+                        Car
+                    </th>
+                </tr>
+                <tr>
+                    <td data-th="Season">
+                        1977
+                    </td>
+                    <td data-th="Country">
+                        Italy
+                    </td>
+                    <td data-th="Driver">
+                        Sandro Munari
+                    </td>
+                    <td data-th="Car">
+                        Lancia Stratos HF
+                    </td>
+                </tr>
+                <tr>
+                    <td data-th="Season">
+                        1978
+                    </td>
+                    <td data-th="Country">
+                        Finland
+                    </td>
+                    <td data-th="Driver">
+                        Markku Alen
+                    </td>
+                    <td data-th="Car">
+                        Fiat 131 Abarth
+                    </td>
+                </tr>
+                <tr>
+                    <td data-th="Season">
+                        1979
+                    </td>
+                    <td data-th="Country">
+                        Sweden
+                    </td>
+                    <td data-th="Driver">
+                        Bjorn Waldegard
+                    </td>
+                    <td data-th="Car">
+                        Ford Escort RS1800
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+    </div>
+
+    <div class="row-full-width padding-bottom">
+
+        <div class="span-12 bg-secondary margin-bottom" id="buttons">
+            <p class="color-primary x-2">
+                # Buttons
+                <small class="ui-filename">components/_buttons</small>
+            </p>
+        </div>
+
+        <div class="span-12 padding-left-right">
+            <p>Expandible with: <code>bg-*</code>, <code>color-*</code>, <code>radius</code>, <code>round</code>, <code>outline</code>,
+                <code>border-*</code>, <code>blank</code>, <code>large</code>, <code>huge</code>,
+                <code>full-width</code> modifiers</p>
+        </div>
+
+        <div class="span-6 padding-all">
+            <p><b>Classic</b></p>
+            <a class="btn" href="#" role="button">Button</a>
+            <button>Button</button>
+            <p><b>Radius</b></p>
+            <a class="btn radius" href="#" role="button">Button</a>
+            <button class="radius">Button</button>
+            <p><b>Round</b></p>
+            <a class="btn round" href="#" role="button">Button</a>
+            <button class="round">Button</button>
+            <p><b>Outline</b></p>
+            <a class="btn outline" href="#" role="button">Button</a>
+            <button class="outline">Button</button>
+            <p><b>With icons</b></p>
+            <a class="btn" href="#" role="button">Button <i
+                    class="ion-ios-arrow-thin-right icon-fixed x-lg icon-margin-left icon-middle"></i></a>
+            <button>Button <i class="ion-ios-arrow-thin-right icon-fixed x-lg icon-margin-left icon-middle"></i>
+            </button>
+        </div>
+
+        <div class="span-6 padding-all">
+            <p><b>Blank</b></p>
+            <a class="btn blank" href="#" role="button">Button</a>
+            <button class="blank">Button</button>
+            <p><b>Grouped</b></p>
+            <div class="btn-group" role="group">
+                <a class="btn" href="#" role="button">Download</a>
+                <button>Download</button>
+            </div>
+            <p><b>Large</b></p>
+            <a class="btn large" href="#" role="button">Button</a>
+            <button class="large">Button</button>
+            <p><b>Huge</b></p>
+            <a class="btn huge" href="#" role="button">Button</a>
+            <button class="huge">Button</button>
+            <p><b>Full width</b></p>
+            <a class="btn full-width" href="#" role="button">Button</a>
+            <button class="full-width">Button</button>
+        </div>
+
+    </div>
+
+    <div class="row-full-width padding-bottom">
+
+        <div class="span-12 bg-secondary margin-bottom" id="badges">
+            <p class="color-primary x-2">
+                # Badges
+                <small class="ui-filename">components/_badges</small>
+            </p>
+        </div>
+
+        <div class="span-12 padding-left-right">
+            <p>Expandible with: <code>bg-*</code>, <code>color-*</code>, <code>radius</code>, <code>round</code>, <code>outline</code>,
+                <code>border-*</code>, <code>blank</code>, <code>right</code> modifiers</p>
+        </div>
+
+        <div class="span-6 padding-all">
+            <p><b>Classic</b></p>
+            <span class="badge">Badge</span>
+            <p><b>Radius</b></p>
+            <span class="badge radius">Badge</span>
+            <p><b>Round</b></p>
+            <span class="badge round">Badge</span>
+            <p><b>Outline</b></p>
+            <span class="badge badge-outline">Badge</span>
+            <p><b>Blank</b></p>
+            <span class="badge badge-blank">Badge</span>
+        </div>
+
+        <div class="span-6 padding-all">
+            <p><b>Badges with buttons</b></p>
+            <a class="btn" href="#" role="button">Link <span class="badge bg-primary round">1</span></a>
+            <button class="btn">Button <span class="badge bg-primary round">1</span></button>
+            <p><b>Badges with text</b></p>
+            <p>
+                This is text <span class="badge">1</span>
+            </p>
+            <p><b>Badges with lists</b></p>
+            <ul class="alt">
+                <li>Unordered list <span class="badge badge-right">1 mail</span></li>
+                <li>Unordered list <span class="badge radius badge-right">1 mail</span></li>
+                <li>Unordered list <span class="badge round badge-right">1 mail</span></li>
+                <li>Unordered list <span class="badge outline badge-right">1 mail</span></li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="row-full-width padding-bottom">
+
+        <div class="span-12 bg-secondary margin-bottom" id="pagination">
+            <p class="color-primary x-2">
+                # Pagination
+                <small class="ui-filename">components/_pagination</small>
+            </p>
+        </div>
+
+        <div class="span-12 padding-left-right">
+            <p>Expandible with: <code>padding-*</code>, <code>margin-*</code>
+                modifiers</p>
+        </div>
+
+        <div class="span-12 padding-all">
+            <p><b>Classic</b></p>
+            <ul class="pagination">
+                <li><a href="#">&lt;</a></li>
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li class="active"><a href="#">4</a></li>
+                <li><a href="#">></a></li>
+            </ul>
+        </div>
+
+        <div class="span-12 padding-all">
+            <p><b>Center</b></p>
+            <ul class="pagination center">
+                <li><a href="#">&lt;</a></li>
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li class="active"><a href="#">4</a></li>
+                <li><a href="#">></a></li>
+            </ul>
+        </div>
+
+        <div class="span-12 padding-all">
+            <p><b>Right</b></p>
+            <ul class="pagination right">
+                <li><a href="#">&lt;</a></li>
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li class="active"><a href="#">4</a></li>
+                <li><a href="#">></a></li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="row-full-width padding-bottom">
+
+        <div class="span-12 bg-secondary margin-bottom" id="grid">
+            <p class="color-primary x-2">
+                # Grid
+                <small class="ui-filename">layout/_grid</small>
+            </p>
+        </div>
+
+        <div class="span-12 padding-left-right">
+            <p>Expandible with: <code>bg-*</code>, <code>color-*</code>, <code>padding-*</code>, <code>margin-*</code>
+                modifiers</p>
+        </div>
+
+        <div class="span-12 padding-all">
+            <p><b>Classic</b></p>
+        </div>
+
+        <div class="row">
+            <div class="span-12 griddummy">
+                span 12
+            </div>
+            <div class="span-8 griddummy">
+                span 8
+            </div>
+            <div class="span-4 griddummy">
+                span 4
+            </div>
+            <div class="span-7 griddummy">
+                span 7
+            </div>
+            <div class="span-5 griddummy">
+                span 5
+            </div>
+            <div class="span-6 griddummy">
+                span 6
+            </div>
+            <div class="span-6 griddummy">
+                span 6
+            </div>
+            <div class="span-4 griddummy">
+                span 4
+            </div>
+            <div class="span-4 griddummy">
+                span 4
+            </div>
+            <div class="span-4 griddummy">
+                span 4
+            </div>
+            <div class="span-3 griddummy">
+                span 3
+            </div>
+            <div class="span-3 griddummy">
+                span 3
+            </div>
+            <div class="span-3 griddummy">
+                span 3
+            </div>
+            <div class="span-3 griddummy">
+                span 3
+            </div>
+            <div class="span-1-5 griddummy">
+                span one fifth
+            </div>
+            <div class="span-1-5 griddummy">
+                span one fifth
+            </div>
+            <div class="span-1-5 griddummy">
+                span one fifth
+            </div>
+            <div class="span-1-5 griddummy">
+                span one fifth
+            </div>
+            <div class="span-1-5 griddummy">
+                span one fifth
+            </div>
+            <div class="span-6 center griddummy">
+                span 6 centered
+            </div>
+            <div class="span-6 right griddummy">
+                span 6 pulled right
+            </div>
+            <div class="span-golden-big griddummy">
+                span golden big
+            </div>
+            <div class="span-golden-small griddummy">
+                span golden small
+            </div>
+            <div class="span-2-6 griddummy">
+                span two sixths
+            </div>
+            <div class="span-4-6 griddummy">
+                span four sixths
+            </div>
+        </div>
+
+        <div class="span-12 padding-all">
+            <p><b>Full width</b></p>
+        </div>
+
+        <div class="row-full-width">
+            <div class="span-12 griddummy">
+                span 12
+            </div>
+            <div class="span-8 griddummy">
+                span 8
+            </div>
+            <div class="span-4 griddummy">
+                span 4
+            </div>
+            <div class="span-7 griddummy">
+                span 7
+            </div>
+            <div class="span-5 griddummy">
+                span 5
+            </div>
+            <div class="span-6 griddummy">
+                span 6
+            </div>
+            <div class="span-6 griddummy">
+                span 6
+            </div>
+            <div class="span-4 griddummy">
+                span 4
+            </div>
+            <div class="span-4 griddummy">
+                span 4
+            </div>
+            <div class="span-4 griddummy">
+                span 4
+            </div>
+            <div class="span-3 griddummy">
+                span 3
+            </div>
+            <div class="span-3 griddummy">
+                span 3
+            </div>
+            <div class="span-3 griddummy">
+                span 3
+            </div>
+            <div class="span-3 griddummy">
+                span 3
+            </div>
+            <div class="span-1-5 griddummy">
+                span one fifth
+            </div>
+            <div class="span-1-5 griddummy">
+                span one fifth
+            </div>
+            <div class="span-1-5 griddummy">
+                span one fifth
+            </div>
+            <div class="span-1-5 griddummy">
+                span one fifth
+            </div>
+            <div class="span-1-5 griddummy">
+                span one fifth
+            </div>
+            <div class="span-6 center griddummy">
+                span 6 centered
+            </div>
+            <div class="span-6 right griddummy">
+                span 6 pulled right
+            </div>
+            <div class="span-golden-big griddummy">
+                span golden big
+            </div>
+            <div class="span-golden-small griddummy">
+                span golden small
+            </div>
+            <div class="span-2-6 griddummy">
+                span two sixths
+            </div>
+            <div class="span-4-6 griddummy">
+                span four sixths
+            </div>
+        </div>
+
+    </div>
+
+    <footer class="padding-all margin-top">
+        <a href="#top">
+            Go to top
+        </a>
+    </footer>
+
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.3/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="../static/js/fallback/jquery.min.js"><\/script>')</script>
+<!-- build:js -->
+<script src="../static/js/plugins.js"></script>
+<!-- endbuild -->
+<script>
+    $(document).ready(function () {
+        $('#ui-destop').click(function () {
+            $('#main').css('width', '80%');
+        });
+        $('#ui-tablet').click(function () {
+            $('#main').css('width', '1024px');
+        });
+        $('#ui-mobile').click(function () {
+            $('#main').css('width', '400px');
+        });
+    });
+
+    $(function () {
+        $('a[href*="#"]:not([href="#"])').click(function () {
+            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                if (target.length) {
+                    $('html, body').animate({
+                        scrollTop: target.offset().top
+                    }, 500);
+                    return false;
+                }
+            }
+        });
+    });
+</script>
+</body>
+</html>

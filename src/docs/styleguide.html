@@ -1,0 +1,624 @@
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Styleguide - Raw project</title>
+    <meta name="description" content="">
+    <meta name="author" content="Mario Loncarek">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="apple-touch-icon" href="../static/images/favicons/apple-touch-icon.png">
+    <!-- CSS -->
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Poppins:500' rel='stylesheet' type='text/css'>
+    <!-- JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+    <script>window.Modernizr || document.write('<script src="../static/js/fallback/modernizr-2.8.3.min.js"><\/script>')</script>
+    <style>
+        .griddummy {
+            padding: 20px;
+            background: #f0f0f0;
+        }
+
+        .row [class*=span-]:empty:before {
+            display: block;
+            content: attr(class);
+            background: #f0f0f0;
+            padding: 20px;
+            margin-bottom: 25px;
+        }
+
+        .row-full-width [class*=span-]:empty:before {
+            display: block;
+            content: attr(class);
+            background: #f0f0f0;
+            padding: 20px;
+            margin-bottom: 25px;
+        }
+    </style>
+</head>
+<body>
+<!--[if lt IE 9]>
+<div class="browserupgrade">
+    <p>You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+        your browser</a> to improve your experience.</p>
+</div>
+<![endif]-->
+<div class="bg-primary text-center" style="padding: 200px 0;">
+    <h1 class="color-white">Style guide</h1>
+    <div class="divider bg-white center">
+    </div>
+    <p class="color-white">
+        This is the style guide, a pattern library, a standard for consistent design and development of a product.
+    </p>
+</div>
+<div class="bg-secondary">
+    <div class="row padding-top-bottom">
+        <div class="span-12 padding-top-bottom">
+            <h3>
+                <small>01</small>
+                Identity
+            </h3>
+            <div class="divider bg-gray">
+            </div>
+        </div>
+        <div class="span-12 padding-top-bottom">
+            <figure style="margin: 0 auto;">
+                <img src="../static/images/dummy.jpg" alt="logo">
+                <figcaption>Logotip</figcaption>
+            </figure>
+        </div>
+    </div>
+</div>
+<div class="bg-neutral padding-bottom">
+    <div class="row padding-top-bottom">
+        <div class="span-12 padding-top-bottom">
+            <h3 class="color-white">
+                <small>02</small>
+                Colors &amp; backgrounds
+            </h3>
+            <div class="divider bg-white">
+            </div>
+            <p class="color-white">
+                Avaliable colors and backgrounds are: primary, secondary, tertiary, error, warrning, success, neutral
+                &amp; white.
+            </p>
+        </div>
+        <div class="span-6 bg-primary text-center color-white" style="padding:100px 0;">
+            bg-primary
+            <div id="output-bg-primary">
+            </div>
+        </div>
+        <div class="span-6 bg-secondary text-center" style="padding:100px 0;">
+            bg-secondary
+            <div id="output-bg-secondary">
+            </div>
+        </div>
+        <div class="span-1-6 bg-tertiary text-center color-white" style="padding:50px 0;">
+            bg-tertiary
+            <div id="output-bg-tertiary">
+            </div>
+        </div>
+        <div class="span-1-6 bg-error text-center" style="padding:50px 0;">
+            bg-error
+            <div id="output-bg-error">
+            </div>
+        </div>
+        <div class="span-1-6 bg-warning text-center color-white" style="padding:50px 0;">
+            bg-warning
+            <div id="output-bg-warning">
+            </div>
+        </div>
+        <div class="span-1-6 bg-success text-center color-white" style="padding:50px 0;">
+            bg-success
+            <div id="output-bg-success">
+            </div>
+        </div>
+        <div class="span-1-6 bg-neutral text-center color-white" style="padding:50px 0;">
+            bg-neutral
+            <div id="output-bg-neutral">
+            </div>
+        </div>
+        <div class="span-1-6 bg-white text-center" style="padding:50px 0;">
+            bg-white
+            <div id="output-bg-white">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="bg-secondary">
+    <div class="row padding-top-bottom">
+        <div class="span-12 padding-top-bottom">
+            <h3>
+                <small>03</small>
+                Typography
+            </h3>
+            <div class="divider bg-gray">
+            </div>
+            <h4><span class="text-highlight"><small>03.a</small> Headings</span></h4>
+            <h5><span class="text-highlight">Base Font-family: <span id="output-heading-font"></span></span></h5>
+        </div>
+        <div class="row padding-top-bottom">
+            <div class="span-7 padding-top-bottom">
+                <h1 id="h1-properties">The quick brown fox jumps over the lazy dog and feels as if he were in the
+                    seventh heaven</h1>
+            </div>
+            <div class="span-5 padding-top-bottom">
+                <h5>
+                    Tag: h1 </h5>
+                <p>
+                    Font size: <span id="output-h1-font-size"></span>
+                </p>
+                <p>
+                    Font color: <span id="output-h1-font-color"></span>
+                </p>
+                <p>
+                    Font weight: <span id="output-h1-font-weight"></span>
+                </p>
+            </div>
+        </div>
+        <div class="row padding-top-bottom">
+            <div class="span-7 padding-top-bottom">
+                <h2 id="h2-properties">The quick brown fox jumps over the lazy dog and feels as if he were in the
+                    seventh heaven</h2>
+            </div>
+            <div class="span-5 padding-top-bottom">
+                <h5>
+                    Tag: h2 </h5>
+                <p>
+                    Font size: <span id="output-h2-font-size"></span>
+                </p>
+                <p>
+                    Font color: <span id="output-h2-font-color"></span>
+                </p>
+                <p>
+                    Font weight: <span id="output-h2-font-weight"></span>
+                </p>
+            </div>
+        </div>
+        <div class="row padding-top-bottom">
+            <div class="span-7 padding-top-bottom">
+                <h3 id="h3-properties">The quick brown fox jumps over the lazy dog and feels as if he were in the
+                    seventh heaven</h3>
+            </div>
+            <div class="span-5 padding-top-bottom">
+                <h5>
+                    Tag: h3 </h5>
+                <p>
+                    Font size: <span id="output-h3-font-size"></span>
+                </p>
+                <p>
+                    Font color: <span id="output-h3-font-color"></span>
+                </p>
+                <p>
+                    Font weight: <span id="output-h3-font-weight"></span>
+                </p>
+            </div>
+        </div>
+        <div class="row padding-top-bottom">
+            <div class="span-7 padding-top-bottom">
+                <h4 id="h4-properties">The quick brown fox jumps over the lazy dog and feels as if he were in the
+                    seventh heaven</h4>
+            </div>
+            <div class="span-5 padding-top-bottom">
+                <h5>
+                    Tag: h4 </h5>
+                <p>
+                    Font size: <span id="output-h4-font-size"></span>
+                </p>
+                <p>
+                    Font color: <span id="output-h4-font-color"></span>
+                </p>
+                <p>
+                    Font weight: <span id="output-h4-font-weight"></span>
+                </p>
+            </div>
+        </div>
+        <div class="row padding-top-bottom">
+            <div class="span-7 padding-top-bottom">
+                <h5 id="h5-properties">The quick brown fox jumps over the lazy dog and feels as if he were in the
+                    seventh heaven</h5>
+            </div>
+            <div class="span-5 padding-top-bottom">
+                <h5>
+                    Tag: h5 </h5>
+                <p>
+                    Font size: <span id="output-h5-font-size"></span>
+                </p>
+                <p>
+                    Font color: <span id="output-h5-font-color"></span>
+                </p>
+                <p>
+                    Font weight: <span id="output-h5-font-weight"></span>
+                </p>
+            </div>
+        </div>
+        <div class="row padding-top-bottom">
+            <div class="span-7 padding-top-bottom">
+                <h6 id="h6-properties">The quick brown fox jumps over the lazy dog and feels as if he were in the
+                    seventh heaven</h6>
+            </div>
+            <div class="span-5 padding-top-bottom">
+                <h5>
+                    Tag: h6 </h5>
+                <p>
+                    Font size: <span id="output-h6-font-size"></span>
+                </p>
+                <p>
+                    Font color: <span id="output-h6-font-color"></span>
+                </p>
+                <p>
+                    Font weight: <span id="output-h6-font-weight"></span>
+                </p>
+            </div>
+        </div>
+        <div class="divider bg-gray">
+        </div>
+        <h4><span class="text-highlight"><small>03.b</small> Paragraphs</span></h4>
+        <h5><span class="text-highlight">Font-family: <span id="output-p-font"></span></span></h5>
+        <div class="row">
+            <div class="span-7 padding-top-bottom">
+                <p>
+                    Now that we know who you are, I know who I am. I'm not a mistake! It all makes sense! In a comic,
+                    you know how you can tell who the arch-villain's going to be? He's the exact opposite of the hero.
+                    And most times they're friends, like you and me! I should've known way back when... You know why,
+                    David? Because of the kids. They called me Mr Glass. Now that we know who you are, I know who I am.
+                    I'm not a mistake! It all makes sense! In a comic, you know how you can tell who the arch-villain's
+                    going to be? He's the exact opposite of the hero. And most times they're friends, like you and me! I
+                    should've known way back when... You know why, David? Because of the kids. They called me Mr Glass.
+                </p>
+                <p>
+                    Now that we know who you are, I know who I am. I'm not a mistake! It all makes sense! In a comic,
+                    you know how you can tell who the arch-villain's going to be? He's the exact opposite of the hero.
+                    And most times they're friends, like you and me! I should've known way back when... You know why,
+                    David? Because of the kids. They called me Mr Glass. Now that we know who you are, I know who I am.
+                    I'm not a mistake! It all makes sense! In a comic, you know how you can tell who the arch-villain's
+                    going to be? He's the exact opposite of the hero. And most times they're friends, like you and me! I
+                    should've known way back when... You know why, David? Because of the kids. They called me Mr Glass.
+                </p>
+            </div>
+            <div class="span-5 padding-top-bottom">
+                <h5>
+                    Tag: p </h5>
+                <p>
+                    Font size: <span id="output-p-font-size"></span>
+                </p>
+                <p>
+                    Font color: <span id="output-p-font-color"></span>
+                </p>
+                <p>
+                    Font weight: <span id="output-p-font-weight"></span>
+                </p>
+            </div>
+        </div>
+        <div class="divider bg-gray">
+        </div>
+        <h4><span class="text-highlight"><small>03.c</small> Blockquotes</span></h4>
+        <blockquote>
+            <p>
+                I want to risk hitting my head on the ceiling of my talent. I want to really test it out and say: O.K.,
+                you’re not that good. You just reached the level here. I don’t ever want to fail, but I want to risk
+                failure every time out of the gate.
+            </p>
+            <cite>Quentin Tarantino</cite>
+        </blockquote>
+        <div class="divider bg-gray">
+        </div>
+        <h4><span class="text-highlight"><small>03.d</small> Options</span></h4>
+        <div class="span-6">
+            <p>
+                <strong>Strong</strong> and <b>Bolded</b> word
+            </p>
+            <p>
+                <em>Emphasis</em> and <i>Italic</i> word
+            </p>
+            <p>
+                <u>Underlined</u> word
+            </p>
+            <p>
+                <small>Small</small>
+                word
+            </p>
+            <p>
+                <sup>Superscripted</sup> word
+            </p>
+        </div>
+        <div class="span-6">
+            <p>
+                <sub>Suberscripted</sub> word
+            </p>
+            <p>
+                <code>.code block</code> section
+            </p>
+            <p>
+                Abbreviations <abbr title="Abbreviations">abbr</abbr>
+            </p>
+            <p>
+                <span class="text-highlight">Highlighted</span> word
+            </p>
+            <p>
+                <a href="#">This is a link</a>
+            </p>
+        </div>
+        <div class="row float-clear">
+            <div class="divider bg-gray">
+            </div>
+            <h4><span class="text-highlight"><small>03.e</small> Lists</span></h4>
+            <div class="span-4 padding-top-bottom">
+                <ul>
+                    <li>Unordered list</li>
+                    <li>
+                        Unordered list
+                        <ul>
+                            <li>Nested list</li>
+                            <li>Nested list</li>
+                        </ul>
+                    </li>
+                    <li>Unordered list</li>
+                    <li>Unordered list</li>
+                </ul>
+            </div>
+            <div class="span-4 padding-top-bottom">
+                <ol>
+                    <li>Ordered list</li>
+                    <li>
+                        Ordered list
+                        <ol>
+                            <li>Ordered list nested</li>
+                            <li>Ordered list nested</li>
+                        </ol>
+                    </li>
+                    <li>Ordered list</li>
+                    <li>Ordered list</li>
+                </ol>
+            </div>
+            <div class="span-4 padding-top-bottom">
+                <ol>
+                    <li>Ordered list</li>
+                    <li>
+                        Ordered list
+                        <ul>
+                            <li>Unordered list nested</li>
+                            <li>Unordered list nested</li>
+                        </ul>
+                    </li>
+                    <li>Unordered list nested</li>
+                    <li>Unordered list nested</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="bg-gray padding-bottom">
+    <div class="row padding-top-bottom">
+        <div class="span-12 padding-top-bottom">
+            <h3 class="color-white">
+                <small>04</small>
+                Grid
+            </h3>
+            <div class="divider bg-white">
+            </div>
+            <p class="color-white">
+                Avaliable in boxed (inside .row) and full width (inside .row-full-width) version.
+            </p>
+            <h4><span class="text-highlight"><small>04.a</small> Boxed (inside .row)</span></h4>
+        </div>
+    </div>
+    <div class="row padding-top-bottom">
+        <div class="span-12"></div>
+        <div class="span-8"></div>
+        <div class="span-4"></div>
+        <div class="span-7"></div>
+        <div class="span-5"></div>
+        <div class="span-6"></div>
+        <div class="span-6"></div>
+        <div class="span-4"></div>
+        <div class="span-4"></div>
+        <div class="span-4"></div>
+        <div class="span-3"></div>
+        <div class="span-3"></div>
+        <div class="span-3"></div>
+        <div class="span-3"></div>
+        <div class="span-1-5"></div>
+        <div class="span-1-5"></div>
+        <div class="span-1-5"></div>
+        <div class="span-1-5"></div>
+        <div class="span-1-5"></div>
+        <div class="span-golden-big"></div>
+        <div class="span-golden-small"></div>
+        <div class="span-2-6"></div>
+        <div class="span-4-6"></div>
+    </div>
+    <div class="row">
+        <div class="span-12">
+            <div class="divider bg-white">
+            </div>
+            <h4><span class="text-highlight"><small>04.b</small> Full width (inside .row-full-width)</span></h4>
+        </div>
+    </div>
+    <div class="row-full-width padding-top-bottom">
+        <div class="span-12"></div>
+        <div class="span-8"></div>
+        <div class="span-4"></div>
+        <div class="span-7"></div>
+        <div class="span-5"></div>
+        <div class="span-6"></div>
+        <div class="span-6"></div>
+        <div class="span-4"></div>
+        <div class="span-4"></div>
+        <div class="span-4"></div>
+        <div class="span-3"></div>
+        <div class="span-3"></div>
+        <div class="span-3"></div>
+        <div class="span-3"></div>
+        <div class="span-1-5"></div>
+        <div class="span-1-5"></div>
+        <div class="span-1-5"></div>
+        <div class="span-1-5"></div>
+        <div class="span-1-5"></div>
+        <div class="span-golden-big"></div>
+        <div class="span-golden-small"></div>
+        <div class="span-2-6"></div>
+        <div class="span-4-6"></div>
+    </div>
+</div>
+<div class="bg-secondary">
+    <div class="row padding-top-bottom">
+        <div class="span-12 padding-top-bottom">
+            <h3>
+                <small>05</small>
+                UI patterns
+            </h3>
+            <div class="divider bg-gray">
+            </div>
+            <h4><span class="text-highlight"><small>05.a</small> Buttons</span></h4>
+            <a class="btn bg-primary" href="#" role="button">bg-primary</a>
+            <a class="btn bg-secondary" href="#" role="button">bg-secondary</a>
+            <a class="btn success" href="#" role="button">success</a>
+            <a class="btn error" href="#" role="button">error</a>
+        </div>
+        <div class="span-6">
+            <h5><span class="text-highlight">Sizes</span></h5>
+            <a class="btn bg-primary large" href="#" role="button">bg-primary large</a>
+            <a class="btn bg-primary huge" href="#" role="button">bg-primary huge</a>
+        </div>
+        <div class="span-6">
+            <h5><span class="text-highlight">Styles</span></h5>
+            <a class="btn bg-primary full-width" href="#" role="button">bg-primary full-width</a>
+            <a class="btn bg-primary outline border-primary" href="#" role="button">bg-primary outline
+                border-primary</a>
+            <a class="btn" href="#" role="button"><i class="ion-ios-download-outline icon-fixed x-lg"></i>icon-fixed
+                x-lg</a>
+        </div>
+        <div class="span-12">
+            <div class="divider bg-gray">
+            </div>
+            <h4><span class="text-highlight"><small>05.b</small> Badges</span></h4>
+            <span class="badge bg-primary">bg-primary</span>
+            <span class="badge bg-secondary">bg-secondary</span>
+            <span class="badge success">success</span>
+            <span class="badge error">error</span>
+            <span class="badge outline border-primary">outline border-primary</span>
+        </div>
+        <div class="span-6">
+            <div class="divider bg-gray">
+            </div>
+            <h4><span class="text-highlight"><small>05.c</small> Pagination</span></h4>
+            <ul class="pagination">
+                <li><a href="#">&lt;</a></li>
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li class="active"><a href="#">active</a></li>
+                <li><a href="#">></a></li>
+            </ul>
+        </div>
+        <div class="span-6">
+            <div class="divider bg-gray">
+            </div>
+            <h4><span class="text-highlight"><small>05.d</small> Breadcrums</span></h4>
+            <ul class="breadcrumbs">
+                <li><a href="#">breadcrumb</a></li>
+                <li><a href="#">breadcrumb</a></li>
+                <li class="current"><a href="javascript:;">current</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.3/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="../static/js/fallback/jquery.min.js"><\/script>')</script>
+<!-- build:js -->
+<script src="../static/js/plugins.js"></script>
+<!-- endbuild -->
+<script>
+    $(document).ready(function () {
+        //Convert rgb to hex
+        function rgb2hex(rgb) {
+            if (rgb.search("rgb") == -1) {
+                return rgb;
+            } else {
+                rgb = rgb.match(/^rgba?\((\d+),\s*(\d+),\s*(\d+)(?:,\s*(\d+))?\)$/);
+                function hex(x) {
+                    return ("0" + parseInt(x).toString(16)).slice(-2);
+                }
+
+                return "#" + hex(rgb[1]) + hex(rgb[2]) + hex(rgb[3]);
+            }
+        };
+        //Colors and backgrounds properties
+        var colorPrimary = $(".bg-primary").css("background-color");
+        $("#output-bg-primary").html(rgb2hex(colorPrimary) + "<br>" + colorPrimary);
+        var colorSecondary = $(".bg-secondary").css("background-color");
+        $("#output-bg-secondary").html(rgb2hex(colorSecondary) + "<br>" + colorSecondary);
+        var colorGreen = $(".bg-tertiary").css("background-color");
+        $("#output-bg-tertiary").html(rgb2hex(colorGreen) + "<br>" + colorGreen);
+        var colorYellow = $(".bg-error").css("background-color");
+        $("#output-bg-error").html(rgb2hex(colorYellow) + "<br>" + colorYellow);
+        var colorRed = $(".bg-warning").css("background-color");
+        $("#output-bg-warning").html(rgb2hex(colorRed) + "<br>" + colorRed);
+        var colorBlue = $(".bg-success").css("background-color");
+        $("#output-bg-success").html(rgb2hex(colorBlue) + "<br>" + colorBlue);
+        var colorSilver = $(".bg-neutral").css("background-color");
+        $("#output-bg-neutral").html(rgb2hex(colorSilver) + "<br>" + colorSilver);
+        var colorGray = $(".bg-white").css("background-color");
+        $("#output-bg-white").html(rgb2hex(colorGray) + "<br>" + colorGray);
+        //Base heading properties
+        var headingBaseFF = $("h1").css("font-family");
+        $("#output-heading-font").html(headingBaseFF);
+        //h1 properties
+        var h1FontSize = $("#h1-properties").css("font-size");
+        $("#output-h1-font-size").html(h1FontSize);
+        var h1FontColor = $("#h1-properties").css("color");
+        $("#output-h1-font-color").html(rgb2hex(h1FontColor));
+        var h1FontWeight = $("#h1-properties").css("font-weight");
+        $("#output-h1-font-weight").html(h1FontWeight);
+        //h2 properties
+        var h2FontSize = $("#h2-properties").css("font-size");
+        $("#output-h2-font-size").html(h2FontSize);
+        var h2FontColor = $("#h2-properties").css("color");
+        $("#output-h2-font-color").html(rgb2hex(h2FontColor));
+        var h2FontWeight = $("#h2-properties").css("font-weight");
+        $("#output-h2-font-weight").html(h2FontWeight);
+        //h3 properties
+        var h3FontSize = $("#h3-properties").css("font-size");
+        $("#output-h3-font-size").html(h3FontSize);
+        var h3FontColor = $("#h3-properties").css("color");
+        $("#output-h3-font-color").html(rgb2hex(h3FontColor));
+        var h3FontWeight = $("#h3-properties").css("font-weight");
+        $("#output-h3-font-weight").html(h3FontWeight);
+        //h4 properties
+        var h4FontSize = $("#h4-properties").css("font-size");
+        $("#output-h4-font-size").html(h4FontSize);
+        var h4FontColor = $("#h4-properties").css("color");
+        $("#output-h4-font-color").html(rgb2hex(h4FontColor));
+        var h4FontWeight = $("#h4-properties").css("font-weight");
+        $("#output-h4-font-weight").html(h4FontWeight);
+        //h5 properties
+        var h5FontSize = $("#h5-properties").css("font-size");
+        $("#output-h5-font-size").html(h5FontSize);
+        var h5FontColor = $("#h5-properties").css("color");
+        $("#output-h5-font-color").html(rgb2hex(h5FontColor));
+        var h5FontWeight = $("#h5-properties").css("font-weight");
+        $("#output-h5-font-weight").html(h5FontWeight);
+        //h6 properties
+        var h6FontSize = $("#h6-properties").css("font-size");
+        $("#output-h6-font-size").html(h6FontSize);
+        var h6FontColor = $("#h6-properties").css("color");
+        $("#output-h6-font-color").html(rgb2hex(h6FontColor));
+        var h6FontWeight = $("#h6-properties").css("font-weight");
+        $("#output-h6-font-weight").html(h6FontWeight);
+        //Base heading properties
+        var pBaseFF = $("p").css("font-family");
+        $("#output-p-font").html(pBaseFF);
+        //paragraph properties
+        var pFontSize = $("#p-properties").css("font-size");
+        $("#output-p-font-size").html(h6FontSize);
+        var pFontColor = $("#p-properties").css("color");
+        $("#output-p-font-color").html(rgb2hex(h6FontColor));
+        var pFontWeight = $("#p-properties").css("font-weight");
+        $("#output-p-font-weight").html(h6FontWeight);
+    });
+</script>
+</body>
+</html>

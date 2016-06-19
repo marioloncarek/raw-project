@@ -1,0 +1,158 @@
+/*
+- Name: Raw project - helpers.scss
+- Version: 1.0
+- Latest update: 19.06.2016
+- Author: Mario Loncarek
+- Author web site: http://marioloncarek.com
+*/
+
+/* ––––––––––––––––––––––––––––––––––––––––––––––––––
+HELPER CLASSES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.float-clear {
+  clear: both;
+}
+
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: right;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+.text-normal {
+  font-weight: normal;
+}
+
+.text-bold {
+  font-weight: bold;
+}
+
+.text-italic {
+  font-style: italic;
+}
+
+.text-underline {
+  border-bottom: 1px solid;
+}
+
+.position-relative {
+  position: relative;
+}
+
+.position-absolute {
+  position: absolute;
+}
+
+.position-fixed {
+  position: fixed;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.no-indent {
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.no-bullet {
+  list-style: none;
+  list-style-image: none;
+}
+
+.no-styling {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.inline {
+  display: inline;
+}
+
+.block,
+.show {
+  display: block;
+}
+
+.hidden,
+.hide {
+  display: none;
+}
+
+.invisible {
+  display: none;
+  visibility: hidden;
+}
+
+.visible {
+  display: block;
+  visibility: visible;
+}
+
+.radius {
+  @include border-radius-radius;
+}
+
+.round {
+  @include border-radius-round;
+}
+
+/* CLEAR AFTER FLOATS */
+.clearfix {
+
+  &:before,
+  &:after {
+    display: table;
+    content: ' ';
+  }
+
+  &:after {
+    clear: both;
+  }
+
+}
+
+/* FULL WIDTH SECIONS */
+.fw-section {
+  padding: $double-spacer 0;
+  width: 100%;
+}
+
+/* BROWSER UPGRADE */
+.browserupgrade {
+  background-color: $error;
+  padding: 20px;
+  text-align: center;
+  color: #fff;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 9999;
+
+  a {
+    color: $base;
+    text-decoration: underline;
+  }
+
+}

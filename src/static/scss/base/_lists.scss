@@ -1,0 +1,50 @@
+/*
+- Name: Raw project - lists.scss
+- Version: 1.0
+- Latest update: 4.4.2016
+- Author: Mario Loncarek
+- Author web site: http://marioloncarek.com
+*/
+
+/* ––––––––––––––––––––––––––––––––––––––––––––––––––
+LISTS
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+ul {
+  list-style: circle inside;
+
+  &.alt {
+    padding-left: 0;
+    list-style: none;
+
+    li {
+      border-bottom: 1px dotted $base;
+    }
+
+  }
+
+}
+
+li,
+dt,
+dl {
+  margin-bottom: ($baseline/2);
+}
+
+ol {
+  list-style: decimal inside;
+}
+
+ol,
+ul,
+dl {
+  margin-top: 0;
+  padding-left: 0;
+}
+
+ul ul,
+ul ol,
+ol ol,
+ol ul {
+  margin: $baseline 0 $baseline ($baseline*2);
+}

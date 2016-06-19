@@ -1,0 +1,17 @@
+/* 
+- Name: Raw project - fonts.scss
+- Version: 1.0
+- Latest update: 4.4.2016
+- Author: Mario Loncarek
+- Author web site: http://marioloncarek.com
+*/
+
+/* ––––––––––––––––––––––––––––––––––––––––––––––––––
+FONTS
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+/* MULI LIGHT */
+@include font-face('Muli', '../fonts/muli-light/Muli-Light', 300);
+
+/* MULI BOLD */
+@include font-face('Muli', '../fonts/muli-bold/Muli-bold', 700);

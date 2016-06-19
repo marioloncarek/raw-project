@@ -1,0 +1,440 @@
+/* 
+- Name: Raw project - forms.scss
+- Version: 1.0
+- Latest update: 19.06.2016
+- Author: Mario Loncarek
+- Author web site: http://marioloncarek.com
+*/
+
+/* ––––––––––––––––––––––––––––––––––––––––––––––––––
+FORMS
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.form {
+  width: 100%;
+}
+
+textarea {
+  resize: none;
+}
+
+label,
+legend {
+  display: block;
+  margin-bottom: $baseline;
+}
+
+fieldset {
+  padding: 0;
+  border-width: 0;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: $placeholder-color;
+}
+
+::-moz-placeholder { /* Firefox 19+ */
+  color: $placeholder-color;
+  opacity: 1;
+}
+
+:-ms-input-placeholder { /* IE 10+ */
+  color: $placeholder-color;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+  color: $placeholder-color;
+}
+
+input[type='email'],
+input[type='number'],
+input[type='search'],
+input[type='text'],
+input[type='tel'],
+input[type='url'],
+input[type='date'],
+input[type='password'],
+input[type='file'],
+input[type='range'],
+input[type='datetime'],
+input[type='datetime-local'],
+input[type='month'],
+input[type='week'],
+input[type='time'],
+textarea,
+select {
+  @include transitions;
+  padding: ($baseline/2);
+  width: 100%;
+  border: 1px solid $base;
+  background-color: #fff;
+  box-shadow: none;
+  -webkit-appearance: none;
+
+  &:focus {
+    outline: 0;
+    border: 1px solid $ui-default;
+  }
+
+  &.primary {
+    border: 1px solid $primary;
+
+    &:focus {
+      border: 1px solid tint($primary, 20%);
+    }
+
+  }
+
+  &.secondary {
+    border: 1px solid $secondary;
+
+    &:focus {
+      border: 1px solid tint($secondary, 20%);
+    }
+
+  }
+
+  &.tertiary {
+    border: 1px solid $tertiary;
+
+    &:focus {
+      border: 1px solid tint($tertiary, 20%);
+    }
+
+  }
+
+  &.error {
+    border: 1px solid $error;
+
+    &:focus {
+      border: 1px solid tint($error, 20%);
+    }
+
+  }
+
+  &.warning {
+    border: 1px solid $warning;
+
+    &:focus {
+      border: 1px solid tint($warning, 20%);
+    }
+
+  }
+
+  &.success {
+    border: 1px solid $success;
+
+    &:focus {
+      border: 1px solid tint($success, 20%);
+    }
+
+  }
+
+  &.neutral {
+    border: 1px solid $neutral;
+
+    &:focus {
+      border: 1px solid tint($neutral, 20%);
+    }
+
+  }
+
+  &.white {
+    border: 1px solid $white;
+
+    &:focus {
+      border: 1px solid tint($white, 20%);
+    }
+
+  }
+
+}
+
+input[type="file"] {
+  cursor: pointer;
+
+  &::-webkit-file-upload-button {
+    background: $ui-default;
+    padding: .6em 2em;
+    border: 0;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  &::-ms-browse {
+
+    background: $ui-default;
+    padding: .6em 2em;
+    border: 0;
+    color: #fff;
+    cursor: pointer;
+    float: left;
+  }
+
+}
+
+input[type='checkbox'],
+input[type='radio'] {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+
+  & + label {
+    position: relative;
+    display: inline-block;
+    padding-left: ($baseline*1.5);
+    cursor: pointer;
+
+    &:before, &:after {
+      @include transitions;
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      width: $baseline;
+      height: $baseline;
+    }
+
+    &:before {
+      content: "";
+      border: 1px solid $base;
+    }
+
+    &:after {
+      transform: scale(0);
+    }
+
+  }
+
+  &:disabled {
+
+    & + label {
+      color: $disabled-color;
+    }
+
+    &:not(:checked), &:checked {
+
+      & + label {
+
+        &:before {
+          background-color: $base;
+        }
+
+      }
+
+    }
+
+    &:checked {
+
+      & + label {
+
+        &:after {
+          color: $disabled-color;
+        }
+
+      }
+
+    }
+
+  }
+
+  &:focus {
+
+    & + label {
+
+      &:before {
+        outline: 0;
+        border: 1px solid $ui-default;
+      }
+
+    }
+
+    &:not(:checked), &:checked {
+
+      & + label {
+
+        &:before {
+          outline: 0;
+          border: 1px solid $ui-default;
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+input[type='checkbox'] {
+
+  & + label {
+
+    &:after {
+      content: "\2714";
+      color: $ui-default;
+      text-align: center;
+      line-height: 1.2;
+      top: 2px;
+    }
+
+  }
+
+  &:checked {
+
+    & + label {
+
+      &:after {
+        transform: scale(1);
+      }
+
+    }
+
+  }
+
+}
+
+input[type='radio'] {
+
+  & + label {
+
+    &:before {
+      border-radius: 100%;
+    }
+
+    &:after {
+      content: " ";
+      background: $ui-default;
+      border-radius: 100%;
+    }
+
+  }
+
+  &:checked {
+
+    & + label {
+
+      &:before {
+        border-color: $base;
+      }
+
+      &:after {
+        transform: scale(.5);
+      }
+
+    }
+
+  }
+
+}
+
+input[type='range'] {
+  -webkit-appearance: none;
+  display: block;
+  margin: 1em auto;
+  padding: 0 ($baseline/2);
+  width: 100%;
+  min-height: 3.25em;
+  /* IE */
+  font-size: 1em;
+  cursor: pointer;
+
+  /* CHROME, OPERA, SAFARI */
+  &::-webkit-slider-runnable-track {
+    -webkit-appearance: none;
+    height: 0.5em;
+    background: $base;
+  }
+
+  &::-webkit-slider-thumb {
+    @include border-radius-round;
+    -webkit-appearance: none;
+    position: relative;
+    margin: -0.4em 0;
+    border: none;
+    width: 1.2em;
+    height: 1.2em;
+    background: $ui-default;
+  }
+
+  /* FIREFOX */
+  &::-moz-range-track {
+    border: none;
+    height: 0.5em;
+    background: $base;
+  }
+
+  &::-moz-range-thumb {
+    @include border-radius-round;
+    border: none;
+    width: 1.2em;
+    height: 1.2em;
+    cursor: ew-resize;
+    background: $ui-default;
+  }
+
+  &::-moz-range-progress {
+    background: none;
+  }
+
+  /* IE */
+  &::-ms-track {
+    border: none;
+    height: 0.5em;
+    background: $base;
+    color: transparent;
+  }
+
+  &::-ms-thumb {
+    @include border-radius-round;
+    border: none;
+    width: 1.2em;
+    height: 1.2em;
+    background: $ui-default;
+  }
+
+  &::-ms-fill-lower, &::-ms-fill-upper {
+    background: none;
+  }
+
+  &::-ms-tooltip {
+    display: none;
+  }
+
+}
+
+.form-group-label {
+  display: table;
+  height: auto;
+  width: 100%;
+
+  &_label {
+    vertical-align: middle;
+    display: table-cell;
+    padding: 0 ($baseline/2);
+    color: $white;
+    height: 100%;
+    overflow: auto;
+    background: $ui-default;
+    max-width: 30px;
+    text-align: center;
+
+    &.radius-left {
+      @include border-radius-left;
+    }
+
+    &.radius-right {
+      @include border-radius-right;
+    }
+
+    &.round-left {
+      @include border-radius-left(100px, 100px);
+    }
+
+    &.round-right {
+      @include border-radius-right(100px, 100px);
+    }
+
+  }
+
+}

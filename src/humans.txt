@@ -1,0 +1,37 @@
+/* TEAM */
+
+    Developer & Designer: Mario Loncarek
+    Email: mario.loncarek@gmail.com
+    Site: http://marioloncarek.com
+    Twitter: @MarioLoncarek
+    Github: marioloncarek
+    Codepen: riogrande
+    From: Zagreb, Croatia
+
+
+/* THANKS */
+
+    n/a: n/a
+
+
+/* SITE */
+
+    Site URL: http://####
+    Last update: 19/06/2016
+    Standards: HTML5, CSS3
+    Software: PhpStorm, Photoshop CC
+
+
+/* FRAMEWORKS */
+
+    Raw project v1.0
+    (up)Date: 19/06/2016
+    Author: Mario Loncarek
+    Author web site: http://marioloncarek.com/
+    Standards: HTML5, CSS3
+    Software: PhpStorm, Photoshop CC
+    HTML5 - HTML5 boilerplate - https://html5boilerplate.com/
+    CSS PRE-PROCESSOR - SCSS - http://sass-lang.com/
+    CSS RESET - Normalize.css - http://necolas.github.io/normalize.css/
+    JS LIBRARY - jQuery - https://jquery.com/
+    TASK RUNNER - gulp.js - http://gulpjs.com/

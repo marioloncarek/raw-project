@@ -1,0 +1,21 @@
+{
+  "name": "raw-project",
+  "description": "Project boilerplate",
+  "main": "index.html",
+  "authors": [
+    "Mario Loncarek"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test"
+  ],
+  "dependencies": {
+    "jquery": "1.12.3",
+    "modernizr": "2.8.3",
+    "normalize-css": "^4.1.1"
+  }
+}
