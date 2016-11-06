@@ -1,7 +1,7 @@
 /* 
 - Name: Raw project - mixins.scss
 - Version: 1.0
-- Latest update: 19.06.2016
+- Latest update: 06.11.2016
 - Author: Mario Loncarek
 - Author web site: http://marioloncarek.com
 */
@@ -33,29 +33,29 @@ MIXINS
 @include breakpoint(600px, min-width){}
 @include breakpoint(number or predefined point, max-width(px)/min-width(px)/or any other feature){}
 */
-@mixin breakpoint($point, $min-or-max: max-width) {
+@mixin breakpoint($point, $media-feature: max-width) {
   @if $point == "xl" { /* 1399px */
-    @media only screen and ($min-or-max: $screen-xl) {
+    @media only screen and ($media-feature: $screen-xl) {
       @content;
     }
   } @else if $point == "lg" { /* 1199px */
-    @media only screen and ($min-or-max: $screen-lg) {
+    @media only screen and ($media-feature: $screen-lg) {
       @content;
     }
   } @else if $point == "md" { /* 979px */
-    @media only screen and ($min-or-max: $screen-md) {
+    @media only screen and ($media-feature: $screen-md) {
       @content;
     }
   } @else if $point == "sm" { /* 767px */
-    @media only screen and ($min-or-max: $screen-sm) {
+    @media only screen and ($media-feature: $screen-sm) {
       @content;
     }
   } @else if $point == "xs" { /* 400px */
-    @media only screen and ($min-or-max: $screen-xs) {
+    @media only screen and ($media-feature: $screen-xs) {
       @content;
     }
   } @else {
-    @media only screen and ($min-or-max: $point) {
+    @media only screen and ($media-feature: $point) {
       @content;
     }
   }
@@ -148,19 +148,19 @@ MIXINS
 }
 
 /* CENTER ANYTHING - with position absolute
-- usage: @include center(vertical/horizontal/both)
+- usage: @include center(vertical/horizontal/both, absolute/relative)
 - must have argument
-- important: put transform-style: preserve-3d; in case of blurry elements
+- important: put transform-style: preserve-3d; on parent in case of blurry elements
 */
-@mixin center($position: "vertical") {
-  position: absolute;
-  @if $position == "vertical" {
+@mixin center($direction: "vertical", $position: absoulute) {
+  position: $position;
+  @if $direction == "vertical" {
     top: 50%;
     transform: translateY(-50%);
-  } @else if $position == "horizontal" {
+  } @else if $direction == "horizontal" {
     left: 50%;
     transform: translate(-50%);
-  } @else if $position == "both" {
+  } @else if $direction == "both" {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);

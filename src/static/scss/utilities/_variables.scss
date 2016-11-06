@@ -1,7 +1,7 @@
 /* 
 - Name: Raw project - variables.scss
 - Version: 1.0
-- Latest update: 19.06.2016
+- Latest update: 06.11.2016
 - Author: Mario Loncarek
 - Author web site: http://marioloncarek.com
 */
@@ -49,7 +49,7 @@ $body-background: #fff;
 $base-font-color: #444;
 $heading-font-color: #333;
 $link-color: $primary;
-$link-color-hover: tint($primary, 40%);
+$link-color-hover: tint($link-color, 40%);
 $selection-color: #b3d4fc; /* Background of selection */
 $base: #e1e1e1; /* Basic core element colors like borders, colors, backgrounds etc... */
 $ui-default: #333; /* Default backgrounds for UI elements like buttons, badges etc... */

@@ -1,7 +1,7 @@
 /* 
 - Name: Raw project - forms.scss
 - Version: 1.0
-- Latest update: 19.06.2016
+- Latest update: 06.11.2016
 - Author: Mario Loncarek
 - Author web site: http://marioloncarek.com
 */
@@ -70,6 +70,8 @@ select {
   background-color: #fff;
   box-shadow: none;
   -webkit-appearance: none;
+  border-radius: 0;
+  font-family: $base-font;
 
   &:focus {
     outline: 0;
@@ -152,6 +154,8 @@ select {
 
 input[type="file"] {
   cursor: pointer;
+  border-radius: 0;
+  font-family: $base-font;
 
   &::-webkit-file-upload-button {
     background: $ui-default;
@@ -416,7 +420,7 @@ input[type='range'] {
     height: 100%;
     overflow: auto;
     background: $ui-default;
-    max-width: 30px;
+    max-width: 3rem;
     text-align: center;
 
     &.radius-left {

@@ -1,7 +1,7 @@
 /* 
 - Name: Raw project - horizontal-rules.scss
 - Version: 1.0
-- Latest update: 19.06.2016
+- Latest update: 06.11.2016
 - Author: Mario Loncarek
 - Author web site: http://marioloncarek.com
 */
@@ -87,8 +87,8 @@ hr {
   clear: both;
   margin-top: ($baseline*2);
   margin-bottom: ($baseline*2);
-  width: 100px;
-  height: 2px;
+  width: 10rem;
+  height: .2rem;
 
   &.center {
     margin-right: auto;

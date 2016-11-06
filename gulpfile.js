@@ -76,13 +76,13 @@ gulp.task('svgsprite', function () {
                 }
             },
             svg: {
-                xmlDeclaration: false, // strip out the XML attribute
-                doctypeDeclaration: false // don't include the !DOCTYPE declaration
+                xmlDeclaration: false, // Strip out the XML attribute
+                doctypeDeclaration: false // Don't include the !DOCTYPE declaration
             },
             mode: {
                 view: { // Activate the «view» mode
                     dest: '',
-                    sprite: 'view-svg-sprite.svg', //sprite name
+                    sprite: 'view-svg-sprite.svg', // Sprite name
                     example: true, // Build sample page
                     prefix: '.icon-view-',
                     bust: false,
@@ -95,7 +95,7 @@ gulp.task('svgsprite', function () {
                 },
                 css: { // Activate the «css» mode
                     dest: '',
-                    sprite: 'css-svg-sprite.svg', //sprite name
+                    sprite: 'css-svg-sprite.svg', // Sprite name
                     example: true, // Build sample page
                     prefix: '.icon-',
                     bust: false,
@@ -108,7 +108,7 @@ gulp.task('svgsprite', function () {
                 },
                 symbol: { // Activate the «symbol» mode
                     dest: '',
-                    sprite: 'symbol-svg-sprite.svg', //sprite name
+                    sprite: 'symbol-svg-sprite.svg', // Sprite name
                     example: true, // Build sample page
                     prefix: '.symbol-',
                     bust: false,
@@ -120,7 +120,7 @@ gulp.task('svgsprite', function () {
                 },
                 defs: { // Activate the «defs» mode
                     dest: '',
-                    sprite: 'defs-svg-sprite.svg', //sprite name
+                    sprite: 'defs-svg-sprite.svg', // Sprite name
                     example: true, // Build sample page
                     prefix: '.defs-',
                     bust: false,
@@ -145,9 +145,11 @@ gulp.task('scss', function () {
         }))
         .pipe(csscomb())
         .pipe(cssbeautify())
-        .pipe(sourcemaps.write('./maps'))
+        .pipe(sourcemaps.write('./'))
         .pipe(gulp.dest('src/static/css/'))
-        .pipe(reload({stream: true}));
+        .pipe(browserSync.stream({
+            match: '**/*.css'
+        }));
 });
 
 //html - validate HTML with w3cjs
@@ -227,7 +229,7 @@ gulp.task('concat:js', ['clear:dist'], function () {
         .pipe(order([
             "vendors/**/*.js",
             "*.js",
-            "plugins.js"
+            "main.js"
         ]))
         .pipe(concat('bundle.min.js'))
         .pipe(uglify())
@@ -279,7 +281,7 @@ gulp.task('copy:fallback', ['compile:css', 'compress:html', 'concat:js', 'compre
         .pipe(gulp.dest('dist/static/js/fallback/'));
 });
 
-//copy:fallback - copy sprites folder [after main tasks]
+//copy:svg:sprites - copy sprites folder [after main tasks]
 gulp.task('copy:svg:sprites', ['compile:css', 'compress:html', 'concat:js', 'compress:images'], function () {
     return gulp
         .src('src/static/svgsprites/*.svg')
