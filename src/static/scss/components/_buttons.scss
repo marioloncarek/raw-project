@@ -12,7 +12,7 @@ BUTTONS
 
 .btn,
 button {
-  background: $ui-default;
+  background: $default-button-background;
 }
 
 .btn,
@@ -22,6 +22,9 @@ input[type='reset'],
 input[type='submit'] {
   @include transitions;
   display: inline-block;
+  font-family: $base-font;
+  line-height: $base-line-height;
+  letter-spacing: $base-letter-spacing;
   overflow: visible;
   margin: ($baseline/2) 0;
   padding: .6em 2em;
@@ -40,19 +43,20 @@ input[type='submit'] {
 
   i {
     color: $white;
+    vertical-align: middle;
   }
 
   &.outline {
     background: none;
-    border: 1px solid $ui-default;
-    color: $ui-default;
+    border: 1px solid $default-button-background;
+    color: $form-group-label-background;
 
     &:hover,
     &:focus,
     &:active,
     &.active {
       background: none;
-      color: tint($ui-default, 70%);
+      color: tint($form-group-label-background, 70%);
       border-color: currentColor;
     }
 
@@ -193,7 +197,7 @@ input[type='submit'] {
   &:focus,
   &:active,
   &.active {
-    background-color: tint($ui-default, 20%);
+    background-color: tint($form-group-label-background, 20%);
     color: $white;
 
     &.bg-primary {

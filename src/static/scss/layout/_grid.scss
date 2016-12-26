@@ -60,6 +60,19 @@ GRID
 
 }
 
+.row-automatic {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+
+  .span {
+    width: auto;
+    display: table-cell;
+    vertical-align: top;
+  }
+
+}
+
 .row-full-width {
   @include clearfix;
   width: 100%;
@@ -230,7 +243,7 @@ GRID
 }
 
 .row-wrap {
-  background: #fff;
+  background: $white;
   box-shadow: 0 2px 6px rgba(100, 100, 100, .3);
 }
 

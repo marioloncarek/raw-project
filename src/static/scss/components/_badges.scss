@@ -13,8 +13,8 @@ BADGES
 .badge {
   display: inline-block;
   padding: .5rem .7rem;
-  background: $ui-default;
-  color: #fff;
+  background: $default-badge-background;
+  color: $white;
   text-align: center;
   white-space: nowrap;
   font-size: $small-font-size;
@@ -26,15 +26,15 @@ BADGES
   }
 
   &-outline {
-    border: 1px solid $ui-default;
+    border: 1px solid $default-badge-background;
     background: none;
-    color: $ui-default;
+    color: $default-badge-background;
     margin-top: -1px;
   }
 
   &-blank {
     background: none;
-    color: $ui-default;
+    color: $default-badge-background;
   }
 
 }

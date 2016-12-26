@@ -14,6 +14,7 @@ SCSS VARIABLES
 
 $base-font: ('Muli', sans-serif);
 $heading-font: ('Poppins', sans-serif);
+
 $base-letter-spacing: .03em;
 $base-font-size: 1.4em; /* Equals 14px */
 $base-line-height: 1.5;
@@ -36,26 +37,68 @@ $small-font-size: .8em;
 
 $primary: #0071bc;
 $secondary: #f0f0f0;
-$tertiary: #333;
+$tertiary: #e1e1e1;
 $error: #f1404b;
 $warning: #ffbc00;
 $success: #39c892;
 $neutral: #4F779F;
 $white: #fff;
+$disabled: #aaa;
 
 /* BASE COLORS */
 
-$body-background: #fff;
+$body-background: $white;
+
 $base-font-color: #444;
 $heading-font-color: #333;
+
 $link-color: $primary;
 $link-color-hover: tint($link-color, 40%);
+
 $selection-color: #b3d4fc; /* Background of selection */
-$base: #e1e1e1; /* Basic core element colors like borders, colors, backgrounds etc... */
+
+$base: $tertiary; /* Basic core element colors like borders, colors, backgrounds etc... */
 $ui-default: #333; /* Default backgrounds for UI elements like buttons, badges etc... */
 $typography-special-colors: #777; /* Colors for html tags like em's, italics, abbr's etc... */
-$disabled-color: #aaa; /* Background of disabled elements */
+
 $placeholder-color: #aaa; /* Color for placeholder text */
+
+/* SPECIFIC VARIABLES */
+
+$browser-upgrade-link-color: $link-color;
+
+$breadcrumbs-divider-color: $base;
+
+$blockqoute-border-color: $base;
+$blockqoute-color: $typography-special-colors;
+
+$input-border-color: $base;
+$input-focus-color: $ui-default;
+$file-upload-button-background: $ui-default;
+$range-slider-thumb: $ui-default;
+$range-slider-runnable-track-background: $base;
+$form-group-label-background: $ui-default;
+$checkbox-radio-border-color: $base;
+$checkbox-radio-focus-border-color: $ui-default;
+$checkbox-icon-color: $ui-default;
+$radio-icon-color: $ui-default;
+
+$pagination-active-background: $primary;
+$pagination-hover-color: $base;
+
+$table-row-border-color: $base;
+
+$image-not-found-background: $error;
+$image-not-found-border: $base;
+$image-not-found-color: $white;
+
+$default-button-background: $ui-default;
+
+$default-badge-background: $ui-default;
+
+$italic-font-color: $typography-special-colors;
+
+$abbr-border-bottom-color: $typography-special-colors;
 
 /* RESPONSIVE - utilities/mixins */
 

@@ -77,7 +77,7 @@ strong {
 
 i,
 em {
-  color: $typography-special-colors;
+  color: $italic-font-color;
   font-style: italic;
 }
 
@@ -109,7 +109,7 @@ small {
 
 abbr[title],
 abbr[data-original-title] {
-  border-bottom: 1px dotted $typography-special-colors;
+  border-bottom: 1px dotted $abbr-border-bottom-color;
   text-decoration: none;
   cursor: help;
 }
@@ -139,7 +139,7 @@ pre {
   position: relative;
   padding: .1em .3em;
   background: $base-font-color;
-  color: #fff;
+  color: $white;
 }
 
 /* ––––––––––––––––––––––––––––––––––––––––––––––––––
@@ -149,8 +149,8 @@ BLOCKQUOTES
 blockquote {
   margin: ($baseline*2) 0;
   padding: ($baseline/2) 2em;
-  border-left: solid 4px $base;
-  color: $typography-special-colors;
+  border-left: solid 4px $blockqoute-border-color;
+  color: $blockqoute-color;
   font-style: italic;
 
   p {

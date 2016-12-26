@@ -40,8 +40,8 @@ hr {
   &.gradient {
     height: 1px;
     border: 0;
-    background: $ui-default;
-    background-image: linear-gradient(to left, #e1e1e1, #777, #e1e1e1);
+    background: $base;
+    background-image: linear-gradient(to left, $secondary, $tertiary, $secondary);
   }
 
   &.icon {
@@ -56,7 +56,7 @@ hr {
       top: -.8em;
       display: inline-block;
       padding: 0 .25em;
-      background: #fff;
+      background: $white;
       content: '\f141';
       font-family: 'Ionicons';
     }
@@ -75,7 +75,7 @@ hr {
       top: -.8em;
       display: inline-block;
       padding: 0 .5em;
-      background: #fff;
+      background: $white;
       content: 'WELCOME';
     }
 

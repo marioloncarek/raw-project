@@ -28,7 +28,7 @@ BREADCRUMBS
     &:before {
       position: relative;
       content: '\002f';
-      color: $base;
+      color: $breadcrumbs-divider-color;
     }
 
     &:first-child {

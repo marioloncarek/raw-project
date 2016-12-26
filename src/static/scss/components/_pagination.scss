@@ -25,7 +25,7 @@ PAGINATION
     &:hover {
 
       a {
-        background: $base;
+        background: $pagination-hover-color;
         color: $base-font-color;
       }
 
@@ -39,8 +39,8 @@ PAGINATION
     &.active {
 
       a {
-        background-color: $ui-default;
-        color: #fff;
+        background-color: $pagination-active-background;
+        color: $white;
       }
 
     }

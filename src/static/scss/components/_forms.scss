@@ -62,12 +62,13 @@ input[type='month'],
 input[type='week'],
 input[type='time'],
 textarea,
-select {
+select,
+optgroup{
   @include transitions;
   padding: ($baseline/2);
   width: 100%;
-  border: 1px solid $base;
-  background-color: #fff;
+  border: 1px solid $input-border-color;
+  background-color: $white;
   box-shadow: none;
   -webkit-appearance: none;
   border-radius: 0;
@@ -75,7 +76,7 @@ select {
 
   &:focus {
     outline: 0;
-    border: 1px solid $ui-default;
+    border: 1px solid $input-focus-color;
   }
 
   &.primary {
@@ -158,19 +159,18 @@ input[type="file"] {
   font-family: $base-font;
 
   &::-webkit-file-upload-button {
-    background: $ui-default;
+    background: $file-upload-button-background;
     padding: .6em 2em;
     border: 0;
-    color: #fff;
+    color: $white;
     cursor: pointer;
   }
 
   &::-ms-browse {
-
-    background: $ui-default;
+    background: $file-upload-button-background;
     padding: .6em 2em;
     border: 0;
-    color: #fff;
+    color: $white;
     cursor: pointer;
     float: left;
   }
@@ -201,7 +201,7 @@ input[type='radio'] {
 
     &:before {
       content: "";
-      border: 1px solid $base;
+      border: 1px solid $checkbox-radio-border-color;
     }
 
     &:after {
@@ -213,7 +213,7 @@ input[type='radio'] {
   &:disabled {
 
     & + label {
-      color: $disabled-color;
+      color: $disabled;
     }
 
     &:not(:checked), &:checked {
@@ -221,7 +221,7 @@ input[type='radio'] {
       & + label {
 
         &:before {
-          background-color: $base;
+          background-color: $disabled;
         }
 
       }
@@ -233,7 +233,7 @@ input[type='radio'] {
       & + label {
 
         &:after {
-          color: $disabled-color;
+          color: $disabled;
         }
 
       }
@@ -244,22 +244,13 @@ input[type='radio'] {
 
   &:focus {
 
-    & + label {
-
-      &:before {
-        outline: 0;
-        border: 1px solid $ui-default;
-      }
-
-    }
-
     &:not(:checked), &:checked {
 
       & + label {
 
         &:before {
           outline: 0;
-          border: 1px solid $ui-default;
+          border: 1px solid $checkbox-radio-focus-border-color;
         }
 
       }
@@ -276,7 +267,7 @@ input[type='checkbox'] {
 
     &:after {
       content: "\2714";
-      color: $ui-default;
+      color: $checkbox-icon-color;
       text-align: center;
       line-height: 1.2;
       top: 2px;
@@ -308,7 +299,7 @@ input[type='radio'] {
 
     &:after {
       content: " ";
-      background: $ui-default;
+      background: $radio-icon-color;
       border-radius: 100%;
     }
 
@@ -317,10 +308,6 @@ input[type='radio'] {
   &:checked {
 
     & + label {
-
-      &:before {
-        border-color: $base;
-      }
 
       &:after {
         transform: scale(.5);
@@ -347,7 +334,7 @@ input[type='range'] {
   &::-webkit-slider-runnable-track {
     -webkit-appearance: none;
     height: 0.5em;
-    background: $base;
+    background: $range-slider-runnable-track-background;
   }
 
   &::-webkit-slider-thumb {
@@ -358,14 +345,14 @@ input[type='range'] {
     border: none;
     width: 1.2em;
     height: 1.2em;
-    background: $ui-default;
+    background: $range-slider-thumb;
   }
 
   /* FIREFOX */
   &::-moz-range-track {
     border: none;
     height: 0.5em;
-    background: $base;
+    background: $range-slider-runnable-track-background;
   }
 
   &::-moz-range-thumb {
@@ -374,7 +361,7 @@ input[type='range'] {
     width: 1.2em;
     height: 1.2em;
     cursor: ew-resize;
-    background: $ui-default;
+    background: $range-slider-thumb;
   }
 
   &::-moz-range-progress {
@@ -385,7 +372,7 @@ input[type='range'] {
   &::-ms-track {
     border: none;
     height: 0.5em;
-    background: $base;
+    background: $range-slider-runnable-track-background;
     color: transparent;
   }
 
@@ -394,7 +381,7 @@ input[type='range'] {
     border: none;
     width: 1.2em;
     height: 1.2em;
-    background: $ui-default;
+    background: $range-slider-thumb;
   }
 
   &::-ms-fill-lower, &::-ms-fill-upper {
@@ -419,7 +406,7 @@ input[type='range'] {
     color: $white;
     height: 100%;
     overflow: auto;
-    background: $ui-default;
+    background: $form-group-label-background;
     max-width: 3rem;
     text-align: center;
 

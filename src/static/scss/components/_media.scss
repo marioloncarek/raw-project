@@ -22,16 +22,18 @@ img {
     position: absolute;
     height: 100%;
     width: 100%;
-    background-color: $base;
-    border: 1px dashed $ui-default;
+    background-color: $image-not-found-background;
+    border: 1px dashed $image-not-found-border;
   }
 
   &:after {
     @include center(vertical);
-    content: attr(alt);
+    content: attr(alt) ' - not found';
+    color: $image-not-found-color;
     display: block;
     width: 100%;
     text-align: center;
+    margin-bottom: 1rem;
   }
 
   &.img-left {

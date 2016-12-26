@@ -168,14 +168,14 @@ MIXINS
 }
 
 /* BOX SHADOW
-- usage: @include box-shadow; or @include box-shadow(0, 2px, 2px, #333);
+- usage: @include box-shadow; or @include box-shadow(0, 2px, 2px, $base);
 */
-@mixin box-shadow($x-axis: 0, $y-axis: 1px, $blur: 2px, $color: $ui-default) {
+@mixin box-shadow($x-axis: 0, $y-axis: 1px, $blur: 2px, $color: $base) {
   box-shadow: $x-axis $y-axis $blur $color;
 }
 
 /* GRADIENT BACKGROUND - with fallback
-- usage: @include gradient(90, #fff, #333);
+- usage: @include gradient(90, $white, #333);
 - must have argument
 */
 @mixin gradient($angle, $colour1, $colour2) {
@@ -193,7 +193,7 @@ MIXINS
 }
 
 /* Opacity - cross browser
-- usage @include opacity(0.5);
+- usage: @include opacity(0.5);
 - must have argument
 */
 @mixin opacity($opacity) {

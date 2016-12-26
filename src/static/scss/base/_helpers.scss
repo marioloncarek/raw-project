@@ -171,14 +171,14 @@ HELPER CLASSES
   background-color: $error;
   padding: 2rem;
   text-align: center;
-  color: #fff;
+  color: $white;
   position: absolute;
   top: 0;
   width: 100%;
   z-index: 9999;
 
   a {
-    color: $base;
+    color: $browser-upgrade-link-color;
     text-decoration: underline;
   }
 

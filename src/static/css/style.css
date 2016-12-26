@@ -83,17 +83,17 @@ MIXINS
 - important: put transform-style: preserve-3d; on parent in case of blurry elements
 */
 /* BOX SHADOW
-- usage: @include box-shadow; or @include box-shadow(0, 2px, 2px, #333);
+- usage: @include box-shadow; or @include box-shadow(0, 2px, 2px, $base);
 */
 /* GRADIENT BACKGROUND - with fallback
-- usage: @include gradient(90, #fff, #333);
+- usage: @include gradient(90, $white, #333);
 - must have argument
 */
 /* Rotate - with fallback
 - usage: @include rotate; or @include rotate(90);
 */
 /* Opacity - cross browser
-- usage @include opacity(0.5);
+- usage: @include opacity(0.5);
 - must have argument
 */
 /* 
@@ -116,8 +116,8 @@ SCSS VARIABLES
 /* Basic core element colors like borders, colors, backgrounds etc... */
 /* Default backgrounds for UI elements like buttons, badges etc... */
 /* Colors for html tags like em's, italics, abbr's etc... */
-/* Background of disabled elements */
 /* Color for placeholder text */
+/* SPECIFIC VARIABLES */
 /* RESPONSIVE - utilities/mixins */
 /* 1399px */
 /* 1199px */
@@ -727,10 +727,6 @@ a:hover {
     color: #66aad7;
 }
 
-a.alt {
-    color: #333;
-}
-
 /*
 - Name: Raw project - lists.scss
 - Version: 1.0
@@ -1188,7 +1184,7 @@ HELPER CLASSES
 }
 
 .browserupgrade a {
-    color: #e1e1e1;
+    color: #0071bc;
     text-decoration: underline;
 }
 
@@ -1335,6 +1331,9 @@ input[type='submit'] {
     color: #fff;
     vertical-align: top;
     text-decoration: none;
+    letter-spacing: 0.03em;
+    font-family: "Muli", sans-serif;
+    line-height: 1.5;
     cursor: pointer;
     -webkit-transition: all 0.2s ease 0s;
     transition: all 0.2s ease 0s;
@@ -1356,6 +1355,7 @@ input[type='submit'] {
   input[type='reset'] i,
   input[type='submit'] i {
     color: #fff;
+    vertical-align: middle;
 }
 
 .btn.outline,
@@ -1455,8 +1455,8 @@ input[type='submit'] {
     input[type='button'].outline.border-tertiary,
     input[type='reset'].outline.border-tertiary,
     input[type='submit'].outline.border-tertiary {
-    border-color: #333;
-    color: #333;
+    border-color: #e1e1e1;
+    color: #e1e1e1;
 }
 
 .btn.outline.border-tertiary:hover, .btn.outline.border-tertiary:focus, .btn.outline.border-tertiary:active, .btn.outline.border-tertiary.active,
@@ -1476,7 +1476,7 @@ input[type='submit'] {
       input[type='submit'].outline.border-tertiary:focus,
       input[type='submit'].outline.border-tertiary:active,
       input[type='submit'].outline.border-tertiary.active {
-    background: #333;
+    background: #e1e1e1;
     color: #fff;
 }
 
@@ -1743,7 +1743,7 @@ input[type='submit'] {
     input[type='submit']:focus.bg-tertiary,
     input[type='submit']:active.bg-tertiary,
     input[type='submit'].active.bg-tertiary {
-    background-color: #5c5c5c;
+    background-color: #e7e7e7;
 }
 
 .btn:hover.bg-error, .btn:focus.bg-error, .btn:active.bg-error, .btn.active.bg-error,
@@ -1987,7 +1987,8 @@ input[type='month'],
 input[type='week'],
 input[type='time'],
 textarea,
-select {
+select,
+optgroup {
     padding: 1rem;
     width: 100%;
     border: 1px solid #e1e1e1;
@@ -2017,7 +2018,8 @@ input[type='email']:focus,
   input[type='week']:focus,
   input[type='time']:focus,
   textarea:focus,
-  select:focus {
+  select:focus,
+  optgroup:focus {
     outline: 0;
     border: 1px solid #333;
 }
@@ -2038,7 +2040,8 @@ input[type='email'].primary,
   input[type='week'].primary,
   input[type='time'].primary,
   textarea.primary,
-  select.primary {
+  select.primary,
+  optgroup.primary {
     border: 1px solid #0071bc;
 }
 
@@ -2058,7 +2061,8 @@ input[type='email'].primary:focus,
     input[type='week'].primary:focus,
     input[type='time'].primary:focus,
     textarea.primary:focus,
-    select.primary:focus {
+    select.primary:focus,
+    optgroup.primary:focus {
     border: 1px solid #338dc9;
 }
 
@@ -2078,7 +2082,8 @@ input[type='email'].secondary,
   input[type='week'].secondary,
   input[type='time'].secondary,
   textarea.secondary,
-  select.secondary {
+  select.secondary,
+  optgroup.secondary {
     border: 1px solid #f0f0f0;
 }
 
@@ -2098,7 +2103,8 @@ input[type='email'].secondary:focus,
     input[type='week'].secondary:focus,
     input[type='time'].secondary:focus,
     textarea.secondary:focus,
-    select.secondary:focus {
+    select.secondary:focus,
+    optgroup.secondary:focus {
     border: 1px solid #f3f3f3;
 }
 
@@ -2118,8 +2124,9 @@ input[type='email'].tertiary,
   input[type='week'].tertiary,
   input[type='time'].tertiary,
   textarea.tertiary,
-  select.tertiary {
-    border: 1px solid #333;
+  select.tertiary,
+  optgroup.tertiary {
+    border: 1px solid #e1e1e1;
 }
 
 input[type='email'].tertiary:focus,
@@ -2138,8 +2145,9 @@ input[type='email'].tertiary:focus,
     input[type='week'].tertiary:focus,
     input[type='time'].tertiary:focus,
     textarea.tertiary:focus,
-    select.tertiary:focus {
-    border: 1px solid #5c5c5c;
+    select.tertiary:focus,
+    optgroup.tertiary:focus {
+    border: 1px solid #e7e7e7;
 }
 
 input[type='email'].error,
@@ -2158,7 +2166,8 @@ input[type='email'].error,
   input[type='week'].error,
   input[type='time'].error,
   textarea.error,
-  select.error {
+  select.error,
+  optgroup.error {
     border: 1px solid #f1404b;
 }
 
@@ -2178,7 +2187,8 @@ input[type='email'].error:focus,
     input[type='week'].error:focus,
     input[type='time'].error:focus,
     textarea.error:focus,
-    select.error:focus {
+    select.error:focus,
+    optgroup.error:focus {
     border: 1px solid #f4666f;
 }
 
@@ -2198,7 +2208,8 @@ input[type='email'].warning,
   input[type='week'].warning,
   input[type='time'].warning,
   textarea.warning,
-  select.warning {
+  select.warning,
+  optgroup.warning {
     border: 1px solid #ffbc00;
 }
 
@@ -2218,7 +2229,8 @@ input[type='email'].warning:focus,
     input[type='week'].warning:focus,
     input[type='time'].warning:focus,
     textarea.warning:focus,
-    select.warning:focus {
+    select.warning:focus,
+    optgroup.warning:focus {
     border: 1px solid #ffc933;
 }
 
@@ -2238,7 +2250,8 @@ input[type='email'].success,
   input[type='week'].success,
   input[type='time'].success,
   textarea.success,
-  select.success {
+  select.success,
+  optgroup.success {
     border: 1px solid #39c892;
 }
 
@@ -2258,7 +2271,8 @@ input[type='email'].success:focus,
     input[type='week'].success:focus,
     input[type='time'].success:focus,
     textarea.success:focus,
-    select.success:focus {
+    select.success:focus,
+    optgroup.success:focus {
     border: 1px solid #61d3a8;
 }
 
@@ -2278,7 +2292,8 @@ input[type='email'].neutral,
   input[type='week'].neutral,
   input[type='time'].neutral,
   textarea.neutral,
-  select.neutral {
+  select.neutral,
+  optgroup.neutral {
     border: 1px solid #4F779F;
 }
 
@@ -2298,7 +2313,8 @@ input[type='email'].neutral:focus,
     input[type='week'].neutral:focus,
     input[type='time'].neutral:focus,
     textarea.neutral:focus,
-    select.neutral:focus {
+    select.neutral:focus,
+    optgroup.neutral:focus {
     border: 1px solid #7292b2;
 }
 
@@ -2318,7 +2334,8 @@ input[type='email'].white,
   input[type='week'].white,
   input[type='time'].white,
   textarea.white,
-  select.white {
+  select.white,
+  optgroup.white {
     border: 1px solid #fff;
 }
 
@@ -2338,7 +2355,8 @@ input[type='email'].white:focus,
     input[type='week'].white:focus,
     input[type='time'].white:focus,
     textarea.white:focus,
-    select.white:focus {
+    select.white:focus,
+    optgroup.white:focus {
     border: 1px solid white;
 }
 
@@ -2414,18 +2432,12 @@ input[type='checkbox']:disabled + label,
 input[type='checkbox']:disabled:not(:checked) + label:before, input[type='checkbox']:disabled:checked + label:before,
   input[type='radio']:disabled:not(:checked) + label:before,
   input[type='radio']:disabled:checked + label:before {
-    background-color: #e1e1e1;
+    background-color: #aaa;
 }
 
 input[type='checkbox']:disabled:checked + label:after,
   input[type='radio']:disabled:checked + label:after {
     color: #aaa;
-}
-
-input[type='checkbox']:focus + label:before,
-  input[type='radio']:focus + label:before {
-    outline: 0;
-    border: 1px solid #333;
 }
 
 input[type='checkbox']:focus:not(:checked) + label:before, input[type='checkbox']:focus:checked + label:before,
@@ -2457,10 +2469,6 @@ input[type='radio'] + label:after {
     border-radius: 100%;
     background: #333;
     content: " ";
-}
-
-input[type='radio']:checked + label:before {
-    border-color: #e1e1e1;
 }
 
 input[type='radio']:checked + label:after {
@@ -2621,10 +2629,10 @@ hr.double {
 hr.gradient {
     height: 1px;
     border: 0;
-    background: #333;
-    background-image: -webkit-gradient(linear, right top, left top, from(#e1e1e1), color-stop(#777), to(#e1e1e1));
-    background-image: -webkit-linear-gradient(right, #e1e1e1, #777, #e1e1e1);
-    background-image: linear-gradient(to left, #e1e1e1, #777, #e1e1e1);
+    background: #e1e1e1;
+    background-image: -webkit-gradient(linear, right top, left top, from(#f0f0f0), color-stop(#e1e1e1), to(#f0f0f0));
+    background-image: -webkit-linear-gradient(right, #f0f0f0, #e1e1e1, #f0f0f0);
+    background-image: linear-gradient(to left, #f0f0f0, #e1e1e1, #f0f0f0);
 }
 
 hr.icon {
@@ -2697,8 +2705,8 @@ img:before {
     display: block;
     width: 100%;
     height: 100%;
-    border: 1px dashed #333;
-    background-color: #e1e1e1;
+    border: 1px dashed #e1e1e1;
+    background-color: #f1404b;
     content: " ";
 }
 
@@ -2706,8 +2714,10 @@ img:after {
     position: absoulute;
     top: 50%;
     display: block;
+    margin-bottom: 1rem;
     width: 100%;
-    content: attr(alt);
+    color: #fff;
+    content: attr(alt) " - not found";
     text-align: center;
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
@@ -2840,7 +2850,7 @@ PAGINATION
 }
 
 .pagination li.active a {
-    background-color: #333;
+    background-color: #0071bc;
     color: #fff;
 }
 
@@ -3010,6 +3020,18 @@ GRID
         padding-left: 1%;
         width: 100%;
     }
+}
+
+.row-automatic {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+
+.row-automatic .span {
+    display: table-cell;
+    width: auto;
+    vertical-align: top;
 }
 
 .row-full-width {
@@ -3274,7 +3296,7 @@ BACKGROUNDS
 }
 
 .bg-tertiary {
-    background-color: #333;
+    background-color: #e1e1e1;
 }
 
 .bg-error {
@@ -3309,7 +3331,7 @@ COLORS
 }
 
 .color-tertiary {
-    color: #333;
+    color: #e1e1e1;
 }
 
 .color-error {
@@ -3344,7 +3366,7 @@ a:hover.border-secondary {
 }
 
 a:hover.border-tertiary {
-    color: #333;
+    color: #e1e1e1;
 }
 
 a:hover.border-error {
