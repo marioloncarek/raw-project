@@ -11,105 +11,105 @@ PADDING'S
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 .no-padding {
-  padding: 0;
+    padding: 0;
 }
 
 .padding-top {
-  padding-top: $normal-spacer;
+    padding-top: $normal-spacer;
 }
 
 .padding-top-double {
-  padding-top: $double-spacer;
+    padding-top: $double-spacer;
 }
 
 .padding-top-half {
-  padding-top: $half-spacer;
+    padding-top: $half-spacer;
 }
 
 .padding-bottom {
-  padding-bottom: $normal-spacer;
+    padding-bottom: $normal-spacer;
 }
 
 .padding-bottom-double {
-  padding-bottom: $double-spacer;
+    padding-bottom: $double-spacer;
 }
 
 .padding-bottom-half {
-  padding-bottom: $half-spacer;
+    padding-bottom: $half-spacer;
 }
 
 .padding-top-bottom {
-  padding-top: $normal-spacer;
-  padding-bottom: $normal-spacer;
+    padding-top: $normal-spacer;
+    padding-bottom: $normal-spacer;
 }
 
 .padding-top-bottom-double {
-  padding-top: $double-spacer;
-  padding-bottom: $double-spacer;
+    padding-top: $double-spacer;
+    padding-bottom: $double-spacer;
 }
 
 .padding-top-bottom-half {
-  padding-top: $half-spacer;
-  padding-bottom: $half-spacer;
+    padding-top: $half-spacer;
+    padding-bottom: $half-spacer;
 }
 
 .padding-left-right {
-  padding-right: $normal-spacer;
-  padding-left: $normal-spacer;
-
-  &[class^="span-"] {
     padding-right: $normal-spacer;
     padding-left: $normal-spacer;
-  }
+
+    &[class^="span-"] {
+        padding-right: $normal-spacer;
+        padding-left: $normal-spacer;
+    }
 
 }
 
 .padding-left-right-double {
-  padding-right: $double-spacer;
-  padding-left: $double-spacer;
-
-  &[class^="span-"] {
     padding-right: $double-spacer;
     padding-left: $double-spacer;
-  }
+
+    &[class^="span-"] {
+        padding-right: $double-spacer;
+        padding-left: $double-spacer;
+    }
 
 }
 
 .padding-left-right-half {
-  padding-right: $half-spacer;
-  padding-left: $half-spacer;
-
-  &[class^="span-"] {
     padding-right: $half-spacer;
     padding-left: $half-spacer;
-  }
+
+    &[class^="span-"] {
+        padding-right: $half-spacer;
+        padding-left: $half-spacer;
+    }
 
 }
 
 .padding-all {
-  padding: $normal-spacer;
-
-  &[class^="span-"] {
     padding: $normal-spacer;
-  }
+
+    &[class^="span-"] {
+        padding: $normal-spacer;
+    }
 
 }
 
 .padding-all-double {
-  padding: $double-spacer;
-
-  &[class^="span-"] {
     padding: $double-spacer;
-  }
+
+    &[class^="span-"] {
+        padding: $double-spacer;
+    }
 
 }
 
 .padding-all-half {
-  padding: $half-spacer;
-
-  &[class^="span-"] {
     padding: $half-spacer;
-  }
+
+    &[class^="span-"] {
+        padding: $half-spacer;
+    }
 
 }
 
@@ -118,71 +118,71 @@ MARGIN'S
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 .no-margin {
-  margin: 0;
+    margin: 0;
 }
 
 .margin-top {
-  margin-top: $normal-spacer;
+    margin-top: $normal-spacer;
 }
 
 .margin-top-double {
-  margin-top: $double-spacer;
+    margin-top: $double-spacer;
 }
 
 .margin-top-half {
-  margin-top: $half-spacer;
+    margin-top: $half-spacer;
 }
 
 .margin-bottom {
-  margin-bottom: $normal-spacer;
+    margin-bottom: $normal-spacer;
 }
 
 .margin-bottom-double {
-  margin-bottom: $double-spacer;
+    margin-bottom: $double-spacer;
 }
 
 .margin-bottom-half {
-  margin-bottom: $half-spacer;
+    margin-bottom: $half-spacer;
 }
 
 .margin-top-bottom {
-  margin-top: $normal-spacer;
-  margin-bottom: $normal-spacer;
+    margin-top: $normal-spacer;
+    margin-bottom: $normal-spacer;
 }
 
 .margin-top-bottom-double {
-  margin-top: $double-spacer;
-  margin-bottom: $double-spacer;
+    margin-top: $double-spacer;
+    margin-bottom: $double-spacer;
 }
 
 .margin-top-bottom-half {
-  margin-top: $half-spacer;
-  margin-bottom: $half-spacer;
+    margin-top: $half-spacer;
+    margin-bottom: $half-spacer;
 }
 
 .margin-left-right {
-  margin-right: $normal-spacer;
-  margin-left: $normal-spacer;
+    margin-right: $normal-spacer;
+    margin-left: $normal-spacer;
 }
 
 .margin-left-right-double {
-  margin-right: $double-spacer;
-  margin-left: $double-spacer;
+    margin-right: $double-spacer;
+    margin-left: $double-spacer;
 }
 
 .margin-left-right-half {
-  margin-right: $half-spacer;
-  margin-left: $half-spacer;
+    margin-right: $half-spacer;
+    margin-left: $half-spacer;
 }
 
 .margin-all {
-  margin: $normal-spacer;
+    margin: $normal-spacer;
 }
 
 .margin-all-double {
-  margin: $double-spacer;
+    margin: $double-spacer;
 }
 
 .margin-all-half {
-  margin: $half-spacer;
+    margin: $half-spacer;
 }

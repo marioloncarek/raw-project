@@ -11,12 +11,12 @@ LINKS
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 a {
-  @include transitions;
-  color: $link-color;
-  text-decoration: none;
+    @include transitions;
+    color: $link-color;
+    text-decoration: none;
 
-  &:hover {
-    color: $link-color-hover;
-  }
+    &:hover {
+        color: $link-color-hover;
+    }
 
 }

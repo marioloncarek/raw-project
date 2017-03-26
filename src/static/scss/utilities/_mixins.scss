@@ -15,17 +15,17 @@ MIXINS
 - usage: @include font-face('hk_grotesklight', '../fonts/hk-grotesk/hkgrotesk-light-webfont', 700, italic);
 */
 @mixin font-face($family, $url-without-ext, $font-weight: normal, $font-style: normal) {
-  @font-face {
-    font-family: '#{$family}';
-    src: url('#{$url-without-ext}.eot'); /* IE9 Compat Modes */
-    src: url('#{$url-without-ext}.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-    url('#{$url-without-ext}.woff2') format('woff2'), /* Super Modern Browsers */
-    url('#{$url-without-ext}.woff') format('woff'), /* Pretty Modern Browsers */
-    url('#{$url-without-ext}.ttf') format('truetype'), /* Safari, Android, iOS */
-    url('#{$url-without-ext}.svg##{$family}') format('svg'); /* Legacy iOS */
-    font-weight: $font-weight;
-    font-style: $font-style;
-  }
+    @font-face {
+        font-family: '#{$family}';
+        src: url('#{$url-without-ext}.eot'); /* IE9 Compat Modes */
+        src: url('#{$url-without-ext}.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+        url('#{$url-without-ext}.woff2') format('woff2'), /* Super Modern Browsers */
+        url('#{$url-without-ext}.woff') format('woff'), /* Pretty Modern Browsers */
+        url('#{$url-without-ext}.ttf') format('truetype'), /* Safari, Android, iOS */
+        url('#{$url-without-ext}.svg##{$family}') format('svg'); /* Legacy iOS */
+        font-weight: $font-weight;
+        font-style: $font-style;
+    }
 }
 
 /* SINGLE BREAKPOINT WITH MIN OR MAX WIDTH
@@ -34,31 +34,31 @@ MIXINS
 @include breakpoint(number or predefined point, max-width(px)/min-width(px)/or any other feature){}
 */
 @mixin breakpoint($point, $media-feature: max-width) {
-  @if $point == "xl" { /* 1399px */
-    @media only screen and ($media-feature: $screen-xl) {
-      @content;
+    @if $point == "xl" { /* 1399px */
+        @media only screen and ($media-feature: $screen-xl) {
+            @content;
+        }
+    } @else if $point == "lg" { /* 1199px */
+        @media only screen and ($media-feature: $screen-lg) {
+            @content;
+        }
+    } @else if $point == "md" { /* 979px */
+        @media only screen and ($media-feature: $screen-md) {
+            @content;
+        }
+    } @else if $point == "sm" { /* 767px */
+        @media only screen and ($media-feature: $screen-sm) {
+            @content;
+        }
+    } @else if $point == "xs" { /* 400px */
+        @media only screen and ($media-feature: $screen-xs) {
+            @content;
+        }
+    } @else {
+        @media only screen and ($media-feature: $point) {
+            @content;
+        }
     }
-  } @else if $point == "lg" { /* 1199px */
-    @media only screen and ($media-feature: $screen-lg) {
-      @content;
-    }
-  } @else if $point == "md" { /* 979px */
-    @media only screen and ($media-feature: $screen-md) {
-      @content;
-    }
-  } @else if $point == "sm" { /* 767px */
-    @media only screen and ($media-feature: $screen-sm) {
-      @content;
-    }
-  } @else if $point == "xs" { /* 400px */
-    @media only screen and ($media-feature: $screen-xs) {
-      @content;
-    }
-  } @else {
-    @media only screen and ($media-feature: $point) {
-      @content;
-    }
-  }
 }
 
 /* BREAKPOINTS
@@ -66,15 +66,15 @@ MIXINS
 - $media-type is disabled as default
 */
 @mixin breakpoints($min-width, $max-width, $media-type: false) {
-  @if $media-type {
-    @media #{$media-type} and (min-width: $min-width) and (max-width: $max-width) {
-      @content;
+    @if $media-type {
+        @media #{$media-type} and (min-width: $min-width) and (max-width: $max-width) {
+            @content;
+        }
+    } @else {
+        @media all and (min-width: $min-width) and (max-width: $max-width) {
+            @content;
+        }
     }
-  } @else {
-    @media all and (min-width: $min-width) and (max-width: $max-width) {
-      @content;
-    }
-  }
 }
 
 /* BOX SIZING
@@ -82,7 +82,7 @@ MIXINS
 - with or without arguments, border-box is default
 */
 @mixin box-sizing($box-model: border-box) {
-  box-sizing: $box-model;
+    box-sizing: $box-model;
 }
 
 /* CLEAR FIX - clear after floats
@@ -90,37 +90,37 @@ MIXINS
 - no arguments
 */
 @mixin clearfix {
-  &:before,
-  &:after {
-    display: table;
-    content: ' ';
-  }
-  &:after {
-    clear: both;
-  }
+    &:before,
+    &:after {
+        display: table;
+        content: ' ';
+    }
+    &:after {
+        clear: both;
+    }
 }
 
 /* TRANSITIONS
 - usage: @include transitions; or @include transitions(color, .5, ease-out, .1);
 */
 @mixin transitions($property: all, $duration: .2s, $timing-function: ease, $delay: 0s) {
-  transition: $property $duration $timing-function $delay;
+    transition: $property $duration $timing-function $delay;
 }
 
 /* BORDER RADIUS - for the rounded edges
 - usage: @include border-radius-radius; or @include border-radius-radius(5px);
 */
 @mixin border-radius-radius($radius: 3px) {
-  border-radius: $radius;
-  background-clip: padding-box;
+    border-radius: $radius;
+    background-clip: padding-box;
 }
 
 /* BORDER RADIUS - for circling
 - usage: @include border-radius-round; or @include border-radius-round(100%);
 */
 @mixin border-radius-round($radius: 100px) {
-  border-radius: $radius;
-  background-clip: padding-box;
+    border-radius: $radius;
+    background-clip: padding-box;
 }
 
 /* BORDER RADIUS - for defining only some rounded corners
@@ -128,7 +128,7 @@ MIXINS
 - second example above will give 5px border radius on top left and top right corner
 */
 @mixin border-radius-custom($topleft: 3px, $topright: 3px, $bottomright: 3px, $bottomleft: 3px) {
-  border-radius: $topleft $topright $bottomright $bottomleft;
+    border-radius: $topleft $topright $bottomright $bottomleft;
 }
 
 /* BORDER RADIUS - for defining left corners radius
@@ -136,7 +136,7 @@ MIXINS
 - second example above will give 5px border radius on top left and bottom left corner
 */
 @mixin border-radius-left($topleft: 3px, $bottomleft: 3px) {
-  border-radius: $topleft 0 0 $bottomleft;
+    border-radius: $topleft 0 0 $bottomleft;
 }
 
 /* BORDER RADIUS - for defining right corners radius
@@ -144,7 +144,7 @@ MIXINS
 - second example above will give 5px border radius on top right and bottom right corner
 */
 @mixin border-radius-right($topright: 3px, $bottomright: 3px) {
-  border-radius: 0 $topright $bottomright 0;
+    border-radius: 0 $topright $bottomright 0;
 }
 
 /* CENTER ANYTHING - with position absolute
@@ -152,26 +152,26 @@ MIXINS
 - must have argument
 - important: put transform-style: preserve-3d; on parent in case of blurry elements
 */
-@mixin center($direction: "vertical", $position: absoulute) {
-  position: $position;
-  @if $direction == "vertical" {
-    top: 50%;
-    transform: translateY(-50%);
-  } @else if $direction == "horizontal" {
-    left: 50%;
-    transform: translate(-50%);
-  } @else if $direction == "both" {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
+@mixin center($direction: "both", $position: absolute) {
+    position: $position;
+    @if $direction == "vertical" {
+        top: 50%;
+        transform: translateY(-50%);
+    } @else if $direction == "horizontal" {
+        left: 50%;
+        transform: translateX(-50%);
+    } @else if $direction == "both" {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
 }
 
 /* BOX SHADOW
 - usage: @include box-shadow; or @include box-shadow(0, 2px, 2px, $base);
 */
 @mixin box-shadow($x-axis: 0, $y-axis: 1px, $blur: 2px, $color: $base) {
-  box-shadow: $x-axis $y-axis $blur $color;
+    box-shadow: $x-axis $y-axis $blur $color;
 }
 
 /* GRADIENT BACKGROUND - with fallback
@@ -179,17 +179,17 @@ MIXINS
 - must have argument
 */
 @mixin gradient($angle, $colour1, $colour2) {
-  background: $colour1;
-  background: linear-gradient(#{$angle}deg, $colour1 0%, $colour2 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$colour1', endColorstr='$colour2', GradientType=1);
+    background: $colour1;
+    background: linear-gradient(#{$angle}deg, $colour1 0%, $colour2 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$colour1', endColorstr='$colour2', GradientType=1);
 }
 
 /* Rotate - with fallback
 - usage: @include rotate; or @include rotate(90);
 */
 @mixin rotate($degrees: 180) {
-  transform: rotate(#{$degrees}deg);
-  filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=#{cos($degrees)}, M12=-#{sin($degrees)}, M21=#{sin($degrees)}, M22=#{cos($degrees)});
+    transform: rotate(#{$degrees}deg);
+    filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=#{cos($degrees)}, M12=-#{sin($degrees)}, M21=#{sin($degrees)}, M22=#{cos($degrees)});
 }
 
 /* Opacity - cross browser
@@ -197,7 +197,7 @@ MIXINS
 - must have argument
 */
 @mixin opacity($opacity) {
-  opacity: $opacity;
-  $opacity-ie: $opacity * 100;
-  filter: alpha(opacity=$opacity-ie);
+    opacity: $opacity;
+    $opacity-ie: $opacity * 100;
+    filter: alpha(opacity=$opacity-ie);
 }

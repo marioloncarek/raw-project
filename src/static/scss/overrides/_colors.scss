@@ -11,35 +11,35 @@ BACKGROUNDS
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 .bg-primary {
-  background-color: $primary;
+    background-color: $primary;
 }
 
 .bg-secondary {
-  background-color: $secondary;
+    background-color: $secondary;
 }
 
 .bg-tertiary {
-  background-color: $tertiary;
+    background-color: $tertiary;
 }
 
 .bg-error {
-  background-color: $error;
+    background-color: $error;
 }
 
 .bg-warning {
-  background-color: $warning;
+    background-color: $warning;
 }
 
 .bg-success {
-  background-color: $success;
+    background-color: $success;
 }
 
 .bg-neutral {
-  background-color: $neutral;
+    background-color: $neutral;
 }
 
 .bg-white {
-  background-color: $white;
+    background-color: $white;
 }
 
 /* ––––––––––––––––––––––––––––––––––––––––––––––––––
@@ -47,35 +47,35 @@ COLORS
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 .color-primary {
-  color: $primary;
+    color: $primary;
 }
 
 .color-secondary {
-  color: $secondary;
+    color: $secondary;
 }
 
 .color-tertiary {
-  color: $tertiary;
+    color: $tertiary;
 }
 
 .color-error {
-  color: $error;
+    color: $error;
 }
 
 .color-warning {
-  color: $warning;
+    color: $warning;
 }
 
 .color-success {
-  color: $success;
+    color: $success;
 }
 
 .color-neutral {
-  color: $neutral;
+    color: $neutral;
 }
 
 .color-white {
-  color: $white;
+    color: $white;
 }
 
 /* ––––––––––––––––––––––––––––––––––––––––––––––––––
@@ -84,36 +84,36 @@ LINK OVERRIDES
 
 a {
 
-  &:hover.border-primary {
-    color: $primary;
-  }
+    &:hover.border-primary {
+        color: $primary;
+    }
 
-  &:hover.border-secondary {
-    color: $secondary;
-  }
+    &:hover.border-secondary {
+        color: $secondary;
+    }
 
-  &:hover.border-tertiary {
-    color: $tertiary;
-  }
+    &:hover.border-tertiary {
+        color: $tertiary;
+    }
 
-  &:hover.border-error {
-    color: $error;
-  }
+    &:hover.border-error {
+        color: $error;
+    }
 
-  &:hover.border-warning {
-    color: $warning;
-  }
+    &:hover.border-warning {
+        color: $warning;
+    }
 
-  &:hover.border-success {
-    color: $success;
-  }
+    &:hover.border-success {
+        color: $success;
+    }
 
-  &:hover.border-neutral {
-    color: $neutral;
-  }
+    &:hover.border-neutral {
+        color: $neutral;
+    }
 
-  &:hover.border-white {
-    color: $white;
-  }
+    &:hover.border-white {
+        color: $white;
+    }
 
 }

@@ -132,6 +132,7 @@ SCSS VARIABLES
 /* Gutter width */
 /* Full-width gutter width */
 /* SPACER SETTINGS - overrides/spacers */
+/* ROUTES */
 /* ––––––––––––––––––––––––––––––––––––––––––––––––––
 BASE
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -629,7 +630,6 @@ FONTS
 BASE
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 html {
-  /* 767px */
     overflow: -moz-scrollbars-vertical;
     overflow-y: scroll;
     -webkit-box-sizing: border-box;
@@ -640,6 +640,7 @@ html {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
+  /* 767px */
 }
 
 @media only screen and (max-width: 47.938em) {
@@ -738,12 +739,11 @@ a:hover {
 LISTS
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 ul {
-    list-style: circle inside;
+    list-style: none;
 }
 
 ul.alt {
     padding-left: 0;
-    list-style: none;
 }
 
 ul.alt li {
@@ -1131,11 +1131,12 @@ HELPER CLASSES
     height: 1px;
     border: 0;
     white-space: nowrap;
+    -webkit-clip-path: inset(50%);
+    clip-path: inset(50%);
 }
 
-.visuallyhidden.focusable:active.focusable:active, .visuallyhidden.focusable:active.focusable:focus,
-.visuallyhidden.focusable:focus.focusable:active,
-.visuallyhidden.focusable:focus.focusable:focus {
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
     position: static;
     overflow: visible;
     clip: auto;
@@ -1143,6 +1144,8 @@ HELPER CLASSES
     width: auto;
     height: auto;
     white-space: inherit;
+    -webkit-clip-path: none;
+    clip-path: none;
 }
 
 .radius {
@@ -1262,7 +1265,7 @@ PRINT STYLES - HTML5 BOILERPLATE
 }
 
 /* ––––––––––––––––––––––––––––––––––––––––––––––––––
-COMPONENETS
+COMPONENTS
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 /*
 - Name: Raw project - badges.scss
@@ -2711,7 +2714,7 @@ img:before {
 }
 
 img:after {
-    position: absoulute;
+    position: absolute;
     top: 50%;
     display: block;
     margin-bottom: 1rem;

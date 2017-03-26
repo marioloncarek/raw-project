@@ -11,50 +11,50 @@ PAGINATION
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 .pagination {
-  margin: $baseline 0;
-  list-style: none;
+    margin: $baseline 0;
+    list-style: none;
 
-  li {
-    @include transitions;
-    display: inline-block;
+    li {
+        @include transitions;
+        display: inline-block;
 
-    &:last-child {
-      margin-right: 0;
+        &:last-child {
+            margin-right: 0;
+        }
+
+        &:hover {
+
+            a {
+                background: $pagination-hover-color;
+                color: $base-font-color;
+            }
+
+        }
+
+        a {
+            display: inline-block;
+            padding: .4em .8em;
+        }
+
+        &.active {
+
+            a {
+                background-color: $pagination-active-background;
+                color: $white;
+            }
+
+        }
+
     }
 
-    &:hover {
-
-      a {
-        background: $pagination-hover-color;
-        color: $base-font-color;
-      }
-
+    &.center {
+        width: 100%;
+        text-align: center;
     }
 
-    a {
-      display: inline-block;
-      padding: .4em .8em;
+    &.right {
+        width: 100%;
+        text-align: right;
     }
-
-    &.active {
-
-      a {
-        background-color: $pagination-active-background;
-        color: $white;
-      }
-
-    }
-
-  }
-
-  &.center {
-    width: 100%;
-    text-align: center;
-  }
-
-  &.right {
-    width: 100%;
-    text-align: right;
-  }
 
 }

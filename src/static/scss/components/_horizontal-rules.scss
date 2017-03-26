@@ -11,88 +11,88 @@ HORIZONTAL RULES
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 hr {
-  clear: both;
-  margin: ($baseline*2) 0;
-  min-height: 0;
-  height: 1px;
-  border-top: 1px solid $base;
-  border-right: 0;
-  border-bottom: 0;
-  border-left: 0;
-
-  &.space {
-    border: 0;
-  }
-
-  &.dashed {
-    border-style: dashed;
-  }
-
-  &.dotted {
-    border-style: dotted;
-  }
-
-  &.double {
-    border-style: double;
-    border-top: 3px double $base;
-  }
-
-  &.gradient {
+    clear: both;
+    margin: ($baseline*2) 0;
+    min-height: 0;
     height: 1px;
-    border: 0;
-    background: $base;
-    background-image: linear-gradient(to left, $secondary, $tertiary, $secondary);
-  }
+    border-top: 1px solid $base;
+    border-right: 0;
+    border-bottom: 0;
+    border-left: 0;
 
-  &.icon {
-    padding: 0;
-    border: none;
-    border-top: medium double $base;
-    color: $base;
-    text-align: center;
-
-    &:after {
-      position: relative;
-      top: -.8em;
-      display: inline-block;
-      padding: 0 .25em;
-      background: $white;
-      content: '\f141';
-      font-family: 'Ionicons';
+    &.space {
+        border: 0;
     }
 
-  }
-
-  &.text {
-    padding: 0;
-    border: none;
-    border-top: medium double $base;
-    color: $base;
-    text-align: center;
-
-    &:after {
-      position: relative;
-      top: -.8em;
-      display: inline-block;
-      padding: 0 .5em;
-      background: $white;
-      content: 'WELCOME';
+    &.dashed {
+        border-style: dashed;
     }
 
-  }
+    &.dotted {
+        border-style: dotted;
+    }
+
+    &.double {
+        border-style: double;
+        border-top: 3px double $base;
+    }
+
+    &.gradient {
+        height: 1px;
+        border: 0;
+        background: $base;
+        background-image: linear-gradient(to left, $secondary, $tertiary, $secondary);
+    }
+
+    &.icon {
+        padding: 0;
+        border: none;
+        border-top: medium double $base;
+        color: $base;
+        text-align: center;
+
+        &:after {
+            position: relative;
+            top: -.8em;
+            display: inline-block;
+            padding: 0 .25em;
+            background: $white;
+            content: '\f141';
+            font-family: 'Ionicons';
+        }
+
+    }
+
+    &.text {
+        padding: 0;
+        border: none;
+        border-top: medium double $base;
+        color: $base;
+        text-align: center;
+
+        &:after {
+            position: relative;
+            top: -.8em;
+            display: inline-block;
+            padding: 0 .5em;
+            background: $white;
+            content: 'WELCOME';
+        }
+
+    }
 
 }
 
 .divider {
-  clear: both;
-  margin-top: ($baseline*2);
-  margin-bottom: ($baseline*2);
-  width: 10rem;
-  height: .2rem;
+    clear: both;
+    margin-top: ($baseline*2);
+    margin-bottom: ($baseline*2);
+    width: 10rem;
+    height: .2rem;
 
-  &.center {
-    margin-right: auto;
-    margin-left: auto;
-  }
+    &.center {
+        margin-right: auto;
+        margin-left: auto;
+    }
 
 }

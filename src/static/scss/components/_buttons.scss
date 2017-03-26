@@ -12,7 +12,7 @@ BUTTONS
 
 .btn,
 button {
-  background: $default-button-background;
+    background: $default-button-background;
 }
 
 .btn,
@@ -20,275 +20,275 @@ button,
 input[type='button'],
 input[type='reset'],
 input[type='submit'] {
-  @include transitions;
-  display: inline-block;
-  font-family: $base-font;
-  line-height: $base-line-height;
-  letter-spacing: $base-letter-spacing;
-  overflow: visible;
-  margin: ($baseline/2) 0;
-  padding: .6em 2em;
-  color: $white;
-  text-decoration: none;
-  vertical-align: top;
-  -webkit-appearance: none;
-  outline: none;
-  border: 0;
-  cursor: pointer;
-
-  &::-moz-focus-inner {
-    border: 0;
-    padding: 0;
-  }
-
-  i {
+    @include transitions;
+    display: inline-block;
+    font-family: $base-font;
+    line-height: $base-line-height;
+    letter-spacing: $base-letter-spacing;
+    overflow: visible;
+    margin: ($baseline/2) 0;
+    padding: .6em 2em;
     color: $white;
-    vertical-align: middle;
-  }
+    text-decoration: none;
+    vertical-align: top;
+    -webkit-appearance: none;
+    outline: none;
+    border: 0;
+    cursor: pointer;
 
-  &.outline {
-    background: none;
-    border: 1px solid $default-button-background;
-    color: $form-group-label-background;
+    &::-moz-focus-inner {
+        border: 0;
+        padding: 0;
+    }
+
+    i {
+        color: $white;
+        vertical-align: middle;
+    }
+
+    &.outline {
+        background: none;
+        border: 1px solid $default-button-background;
+        color: $form-group-label-background;
+
+        &:hover,
+        &:focus,
+        &:active,
+        &.active {
+            background: none;
+            color: tint($form-group-label-background, 70%);
+            border-color: currentColor;
+        }
+
+        &.border-primary {
+            border-color: $primary;
+            color: $primary;
+
+            &:hover,
+            &:focus,
+            &:active,
+            &.active {
+                background: $primary;
+                color: $white;
+            }
+
+        }
+
+        &.border-secondary {
+            border-color: $secondary;
+            color: $secondary;
+
+            &:hover,
+            &:focus,
+            &:active,
+            &.active {
+                background: $secondary;
+                color: $white;
+            }
+
+        }
+
+        &.border-tertiary {
+            border-color: $tertiary;
+            color: $tertiary;
+
+            &:hover,
+            &:focus,
+            &:active,
+            &.active {
+                background: $tertiary;
+                color: $white;
+            }
+
+        }
+
+        &.border-error {
+            border-color: $error;
+            color: $error;
+
+            &:hover,
+            &:focus,
+            &:active,
+            &.active {
+                background: $error;
+                color: $white;
+            }
+
+        }
+
+        &.border-warning {
+            border-color: $warning;
+            color: $warning;
+
+            &:hover,
+            &:focus,
+            &:active,
+            &.active {
+                background: $warning;
+                color: $white;
+            }
+
+        }
+
+        &.border-success {
+            border-color: $success;
+            color: $success;
+
+            &:hover,
+            &:focus,
+            &:active,
+            &.active {
+                background: $success;
+                color: $white;
+            }
+
+        }
+
+        &.border-neutral {
+            border-color: $neutral;
+            color: $neutral;
+
+            &:hover,
+            &:focus,
+            &:active,
+            &.active {
+                background: $neutral;
+                color: $white;
+            }
+
+        }
+
+        &.border-white {
+            border-color: $white;
+            color: $white;
+
+            &:hover,
+            &:focus,
+            &:active,
+            &.active {
+                background: $white;
+                color: $white;
+            }
+
+        }
+
+    }
+
+    &.blank {
+        background: none;
+        color: $base-font-color;
+    }
+
+    &.large {
+        padding: 1em 2.5em;
+    }
+
+    &.huge {
+        padding: 1.3em 3em;
+    }
+
+    &.full-width {
+        width: 100%;
+        text-align: center;
+        padding: 1em .5em;
+    }
 
     &:hover,
     &:focus,
     &:active,
     &.active {
-      background: none;
-      color: tint($form-group-label-background, 70%);
-      border-color: currentColor;
-    }
-
-    &.border-primary {
-      border-color: $primary;
-      color: $primary;
-
-      &:hover,
-      &:focus,
-      &:active,
-      &.active {
-        background: $primary;
+        background-color: tint($form-group-label-background, 20%);
         color: $white;
-      }
+
+        &.bg-primary {
+            background-color: tint($primary, 20%);
+        }
+
+        &.bg-secondary {
+            background-color: tint($secondary, 20%);
+        }
+
+        &.bg-tertiary {
+            background-color: tint($tertiary, 20%);
+        }
+
+        &.bg-error {
+            background-color: tint($error, 20%);
+        }
+
+        &.bg-warning {
+            background-color: tint($warning, 20%);
+        }
+
+        &.bg-success {
+            background-color: tint($success, 20%);
+        }
+
+        &.bg-white {
+            background-color: tint($white, 20%);
+        }
 
     }
-
-    &.border-secondary {
-      border-color: $secondary;
-      color: $secondary;
-
-      &:hover,
-      &:focus,
-      &:active,
-      &.active {
-        background: $secondary;
-        color: $white;
-      }
-
-    }
-
-    &.border-tertiary {
-      border-color: $tertiary;
-      color: $tertiary;
-
-      &:hover,
-      &:focus,
-      &:active,
-      &.active {
-        background: $tertiary;
-        color: $white;
-      }
-
-    }
-
-    &.border-error {
-      border-color: $error;
-      color: $error;
-
-      &:hover,
-      &:focus,
-      &:active,
-      &.active {
-        background: $error;
-        color: $white;
-      }
-
-    }
-
-    &.border-warning {
-      border-color: $warning;
-      color: $warning;
-
-      &:hover,
-      &:focus,
-      &:active,
-      &.active {
-        background: $warning;
-        color: $white;
-      }
-
-    }
-
-    &.border-success {
-      border-color: $success;
-      color: $success;
-
-      &:hover,
-      &:focus,
-      &:active,
-      &.active {
-        background: $success;
-        color: $white;
-      }
-
-    }
-
-    &.border-neutral {
-      border-color: $neutral;
-      color: $neutral;
-
-      &:hover,
-      &:focus,
-      &:active,
-      &.active {
-        background: $neutral;
-        color: $white;
-      }
-
-    }
-
-    &.border-white {
-      border-color: $white;
-      color: $white;
-
-      &:hover,
-      &:focus,
-      &:active,
-      &.active {
-        background: $white;
-        color: $white;
-      }
-
-    }
-
-  }
-
-  &.blank {
-    background: none;
-    color: $base-font-color;
-  }
-
-  &.large {
-    padding: 1em 2.5em;
-  }
-
-  &.huge {
-    padding: 1.3em 3em;
-  }
-
-  &.full-width {
-    width: 100%;
-    text-align: center;
-    padding: 1em .5em;
-  }
-
-  &:hover,
-  &:focus,
-  &:active,
-  &.active {
-    background-color: tint($form-group-label-background, 20%);
-    color: $white;
-
-    &.bg-primary {
-      background-color: tint($primary, 20%);
-    }
-
-    &.bg-secondary {
-      background-color: tint($secondary, 20%);
-    }
-
-    &.bg-tertiary {
-      background-color: tint($tertiary, 20%);
-    }
-
-    &.bg-error {
-      background-color: tint($error, 20%);
-    }
-
-    &.bg-warning {
-      background-color: tint($warning, 20%);
-    }
-
-    &.bg-success {
-      background-color: tint($success, 20%);
-    }
-
-    &.bg-white {
-      background-color: tint($white, 20%);
-    }
-
-  }
 
 }
 
 .btn-group {
-  @include clearfix;
-  display: inline-block;
-  vertical-align: bottom;
-  margin: ($baseline/2) 0;
-  padding: 0;
-
-  .btn, button {
-    float: left;
-    border-radius: 0;
-    position: relative;
-    margin: 0;
-
-    &:hover,
-    &:focus,
-    &:active,
-    &.active {
-      z-index: 99;
-    }
-
-    &:not(:first-child):not(:last-child) {
-      margin-left: -1px;
-      margin-right: -1px;
-    }
-
-  }
-
-  &.radius {
+    @include clearfix;
+    display: inline-block;
+    vertical-align: bottom;
+    margin: ($baseline/2) 0;
+    padding: 0;
 
     .btn, button {
+        float: left;
+        border-radius: 0;
+        position: relative;
+        margin: 0;
 
-      &:first-child {
-        @include border-radius-custom(3px, 0, 0, 3px);
-      }
+        &:hover,
+        &:focus,
+        &:active,
+        &.active {
+            z-index: 99;
+        }
 
-      &:last-child {
-        @include border-radius-custom(0, 3px, 3px, 0);
-      }
-
-    }
-
-  }
-
-  &.round {
-
-    .btn, button {
-
-      &:first-child {
-        @include border-radius-custom(100px, 0, 0, 100px);
-      }
-
-      &:last-child {
-        @include border-radius-custom(0, 100px, 100px, 0);
-      }
+        &:not(:first-child):not(:last-child) {
+            margin-left: -1px;
+            margin-right: -1px;
+        }
 
     }
 
-  }
+    &.radius {
+
+        .btn, button {
+
+            &:first-child {
+                @include border-radius-custom(3px, 0, 0, 3px);
+            }
+
+            &:last-child {
+                @include border-radius-custom(0, 3px, 3px, 0);
+            }
+
+        }
+
+    }
+
+    &.round {
+
+        .btn, button {
+
+            &:first-child {
+                @include border-radius-custom(100px, 0, 0, 100px);
+            }
+
+            &:last-child {
+                @include border-radius-custom(0, 100px, 100px, 0);
+            }
+
+        }
+
+    }
 
 }
